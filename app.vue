@@ -26,7 +26,8 @@
           <ul>
             <li>
 
-              <nuxt-link v-for="(nav, index) in sub_navigation" :key="index" :to="nav.to" class="is-block  pr-3 has-text-dark">
+              <nuxt-link v-for="(nav, index) in sub_navigation" :key="index" :to="nav.to"
+                class="is-block  pr-3 has-text-dark">
 
                 {{ nav.name }}
               </nuxt-link>
@@ -52,7 +53,8 @@
           <ul>
             <li>
 
-              <a v-for="(nav, index) in abs_contact" :key="index" :href="nav.link" class="is-block heading has-text-weight-semibold  pr-3 has-text-dark">
+              <a v-for="(nav, index) in abs_contact" :key="index" :href="nav.link"
+                class="is-block heading has-text-weight-semibold  pr-3 has-text-dark">
 
                 {{ nav.name }} ↗
               </a>
@@ -62,6 +64,25 @@
         </div>
       </div>
       <div class="column ">
+        <div class="columns">
+          <div class="column is-8-desktop">
+
+            <p class="title is-size-5">
+    
+              Product Photography
+            </p>
+            <p class="subtitle is-sisze-7">
+    
+              
+              
+              The products are the static entities that I see and work with every day. To be significant, products are objects
+              that we want to touch and feel rather seeing them in images. For this reason, I always add a story behind every
+              product I work with.
+              
+            </p>
+          </div>
+        </div>
+        <br>
         <NuxtPage />
 
       </div>
@@ -223,5 +244,4 @@ body {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
-}
-</style>
+}</style>
