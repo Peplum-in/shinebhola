@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 
 media_folder: public/img
 public_folder: /img
-site_url: https://peplum.netlify.app/
+site_url: https://shinebhola.netlify.app/
 
 collections:
   - name: 'work'
@@ -16,12 +16,6 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Cover', name: 'cover', widget: 'image' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Alight Shift (left,right,center)', name: 'shift', widget: 'string' }
-      - { label: 'Time (2018 - 2019)', name: 'time', widget: 'string' }
-      - { label: 'Link Preview', name: 'link_preview', widget: 'string' }
-      - { label: 'Header Type (split,para)', name: 'header_type', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'caption', name: 'caption', widget: 'string' }
+      - { label: 'tags', name: 'tag', widget: 'string' }
