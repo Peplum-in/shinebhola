@@ -1,6 +1,6 @@
 <template>
-    <div class="section columns px-0 mt-6">
-        <div class="column is-6-dekstop is-12-mobile is-8-tablet">
+    <div class="">
+        <div class="">
 
             <p class="title is-size-4 has-text-weight-normal">
                 We are quick to revert on mail at

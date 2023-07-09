@@ -2,109 +2,75 @@
   <div>
 
     <div class="level px-0 mb-0 pb-0 is-mobile is-hidden-desktop">
-      <nuxt-link to="/" class="level-left">
-        <figure class="image" style="width:100px">
-          <img src="/Peplum-alt.svg" alt="" style="width:100px">
-       
-
-        </figure>
-
+      <nuxt-link to="/" class="level-left is-size-5">
+        Company Name
       </nuxt-link>
       <div class="level-right">
 
-        <p @click="showNav" v-if="!showMobileNav" class="has-text-weight-semibold has-text-dark">Menu</p>
-        <p @click="showNav" v-if="showMobileNav" class="has-text-weight-semibold has-text-dark">Close</p>
+        <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">Menu</p>
+        <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">Close</p>
       </div>
     </div>
     <div class="mobile-nav" v-show="showMobileNav">
       <ul>
-        <nuxt-link to="/" class="has-text-dark has-text-weight-semibold">
-          <div class="is-active-radio" v-if="route.path == '/'"></div>
-          Home
-        </nuxt-link>
-        <nuxt-link to="/work" class="has-text-dark has-text-weight-semibold">
+        <nuxt-link v-for="(nav, index) in navigation" :key="index" to="/"
+          class="level-item has-text-weight-semibold pr-3">
 
-          <div class="is-active-radio" v-if="route.path.includes('work')"></div>
-          Work
+          {{ nav.name }}
         </nuxt-link>
-        <nuxt-link to="/about" class="has-text-dark has-text-weight-semibold">
 
-          <div class="is-active-radio" v-if="route.path.includes('about')"></div>
-          About us
-        </nuxt-link>
-        <nuxt-link to="/contact" class="has-text-dark has-text-weight-semibold">
-          <div class="is-active-radio" v-if="route.path.includes('contact')"></div>
-          Contact
-        </nuxt-link>
       </ul>
     </div>
     <div class="level mt-3 is-hidden-touch">
       <div class="level-left">
         <nuxt-link to="/" class="level-item  px-0 pl-1 py-0">
-          <figure class="image" style="width:120px">
-            <img src="/Peplum-alt.svg" alt="" style="width:120px">
-
-    
-          </figure>
-        </nuxt-link>
+          Company Name </nuxt-link>
 
       </div>
       <div class="level-right">
-        <nuxt-link to="/" class="level-item has-text-weight-semibold pr-3">
-            <div class="is-active-radio mr-2 " v-if="route.path  == '/'"></div>
+        <nuxt-link v-for="(nav, index) in navigation" :key="index" to="/"
+          class="level-item has-text-weight-semibold pr-3">
 
-            Home
-          </nuxt-link>
-          <nuxt-link to="/about" class=" has-text-weight-semibold level-item pr-3">
-            <div class="is-active-radio mr-2" v-if="route.path.includes('about')"></div>
-
-            About
-          </nuxt-link>
-          <nuxt-link to="/work" class=" has-text-weight-semibold level-item pr-3">
-            <div class="is-active-radio mr-2" v-if="route.path.includes('work')"></div>
-
-            Work
-          </nuxt-link>
-          <nuxt-link to="/contact" class="has-text-weight-semibold level-item pr-3" >
-            <div class="is-active-radio mr-2" v-if="route.path.includes('contact')"></div>
-
-            Contact
-          </nuxt-link>
+          {{ nav.name }}
+        </nuxt-link>
       </div>
     </div>
-    <!-- <nav class="navbar">
-      <div class="navbar-menu">
-
-        <div class="navbar-brand px-0 py-0" >
-        </div>
-        <div class="navbar-end">
-          <nuxt-link to="/" class="navbar-item">
-            <div class="is-active-radio mr-2" v-if="route.path  == '/'"></div>
-
-            Home
-          </nuxt-link>
-          <nuxt-link to="/about" class="navbar-item">
-            <div class="is-active-radio mr-2" v-if="route.path.includes('about')"></div>
-
-            About
-          </nuxt-link>
-          <nuxt-link to="/work" class="navbar-item">
-            <div class="is-active-radio mr-2" v-if="route.path.includes('work')"></div>
-
-            Work
-          </nuxt-link>
-          <nuxt-link to="/" class="navbar-item">
-            <div class="is-active-radio mr-2" v-if="route.path.includes('contact')"></div>
-
-            Contact
-          </nuxt-link>
-        </div>
-      </div>
-    </nav> -->
   </div>
 </template>
 
 <script setup>
+
+const navigation = [
+  {
+    'name': 'Home',
+    'to': '/',
+  },
+  {
+    'name': 'Architecture',
+    'to': '/',
+  },
+  {
+    'name': 'Bespoke',
+    'to': '/',
+  },
+  {
+    'name': 'Product',
+    'to': '/',
+  },
+  {
+    'name': 'Portraits',
+    'to': '/',
+  },
+  {
+    'name': 'Travel',
+    'to': '/',
+  },
+  {
+    'name': 'Contact',
+    'to': '/',
+  },
+];
+
 const showMobileNav = ref(false)
 
 function showNav() {
@@ -146,8 +112,8 @@ watch(route, value => {
   display: inline-block;
 }
 
-.navbar-item:hover{
-  background-color: #fff;  
+.navbar-item:hover {
+  background-color: #fff;
 }
 
 /* Animate SVG pelpum Brand */
@@ -306,4 +272,5 @@ watch(route, value => {
 .svg-elem-6 {
   -webkit-animation: animate-svg-fill-6 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s both;
   animation: animate-svg-fill-6 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) 1.3s both
-}</style>
+}
+</style>

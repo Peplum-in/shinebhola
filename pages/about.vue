@@ -1,11 +1,12 @@
 <template>
     <div>
-        <section class="section px-0">
+        <section class="py-0">
             <div class="columns">
-                <div iv class="column is-4-desktop">
-                    <p class="title my-6">
-                        Set up in 2023 by a <nuxt-link to="#dhruv" class="is-underlined">badass designer</nuxt-link> & a <nuxt-link to="#padam"
-                            class="is-underlined">full-stack programmer on steroids</nuxt-link> . This duo brings in
+                <div class=" column is-4-desktop ">
+                    <p class="title ">
+                        Set up in 2023 by a <nuxt-link to="#dhruv" class="is-underlined">badass designer</nuxt-link> & a
+                        <nuxt-link to="#padam" class="is-underlined">full-stack programmer on steroids</nuxt-link> . This
+                        duo brings in
                         diverse skills sets ranging from 0 to N ( almost everything )
                     </p>
                     <div class="py-6">
@@ -30,10 +31,15 @@
                         <p class="heading">ETHOS</p>
                         <p class="title is-size-5">
 
-                           We believe in collaboration, transperancy & building it in the open
+                            We believe in collaboration, transperancy & building it in the open
                         </p>
                     </div>
                     <br>
+                </div>
+                <div class="column is-4 is-offset-1-desktop">
+                    <figure class="image is-4by5">
+                        <img src="" class="has-background-warning" alt="">
+                    </figure>
                 </div>
                 <br>
 
@@ -65,7 +71,7 @@
                     <a href="" class="has-text-dark is-underlined">Email </a>
 
                 </div>
-                <div  id="padam" class="column is-4-desktop">
+                <div id="padam" class="column is-4-desktop">
                     <figure class="image has-background-secondary is-rounded  is-128x128">
                         <img src="" class="is-rounded" alt="">
                     </figure>
@@ -86,7 +92,7 @@
                     <a href="" class="has-text-dark is-underlined">Instagram ↗</a> <br>
                     <a href="" class="has-text-dark is-underlined">Website →</a><br>
                     <a href="" class="has-text-dark is-underlined">Email </a>
-                    
+
                 </div>
                 <br>
 
@@ -106,7 +112,7 @@ figure.is-rounded {
     border-radius: 50% !important;
 }
 
-.has-background-secondary{
+.has-background-secondary {
     background-color: #FFF000;
 }
 </style>
