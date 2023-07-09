@@ -1,6 +1,6 @@
 <template>
-  <div class="section py-5">
-    <div class="columns is-hidden-touch pt-0">
+  <div class="section py-0 ">
+    <div class="columns py-6 is-hidden-touch pt-0">
       <div class="column is-2">
         <nuxt-link to="/" class="has-text-dark is-size-5">
           Company Name
@@ -12,7 +12,7 @@
           <ul>
             <li>
 
-              <nuxt-link v-for="(nav, index) in navigation" :key="index" to="/"
+              <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
                 class="is-block has-text-dark has-text-weight-semibold pr-3">
 
                 {{ nav.name }}
@@ -26,7 +26,7 @@
           <ul>
             <li>
 
-              <nuxt-link v-for="(nav, index) in sub_navigation" :key="index" to="/" class="is-block  pr-3 has-text-dark">
+              <nuxt-link v-for="(nav, index) in sub_navigation" :key="index" :to="nav.to" class="is-block  pr-3 has-text-dark">
 
                 {{ nav.name }}
               </nuxt-link>
@@ -39,10 +39,23 @@
           <ul>
             <li>
 
-              <nuxt-link v-for="(nav, index) in follows" :key="index" to="/" class="is-block  pr-3 has-text-dark">
+              <nuxt-link v-for="(nav, index) in follows" :key="index" :to="nav.to" class="is-block  pr-3 has-text-dark">
 
                 {{ nav.name }}
               </nuxt-link>
+
+            </li>
+          </ul>
+        </div>
+        <div class="my-5">
+
+          <ul>
+            <li>
+
+              <a v-for="(nav, index) in abs_contact" :key="index" :href="nav.link" class="is-block heading has-text-weight-semibold  pr-3 has-text-dark">
+
+                {{ nav.name }} ↗
+              </a>
 
             </li>
           </ul>
@@ -76,7 +89,7 @@
       </div>
       <div class="mobile-nav" v-show="showMobileNav">
         <ul>
-          <nuxt-link v-for="(nav, index) in navigation" :key="index" to="/"
+          <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
             class="level-item has-text-weight-semibold pr-3">
 
             {{ nav.name }}
@@ -136,11 +149,11 @@ const sub_navigation = [
   },
   {
     'name': 'Clients',
-    'to': '/',
+    'to': '/clients',
   },
   {
     'name': 'Services',
-    'to': '/',
+    'to': '/services',
   },
   {
     'name': 'Contact',
@@ -163,6 +176,16 @@ const follows = [
   {
     'name': 'Email',
     'to': '/',
+  },
+];
+const abs_contact = [
+  {
+    'name': 'info@shinebhola',
+    'link': 'mailto:info@shinebhola',
+  },
+  {
+    'name': '+91-941-422-7723',
+    'link': 'tel:+91-941-422-7723',
   },
 ];
 

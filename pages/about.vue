@@ -3,38 +3,42 @@
         <section class="py-0">
             <div class="columns">
                 <div class=" column is-4-desktop ">
-                    <p class="title ">
-                        Set up in 2023 by a <nuxt-link to="#dhruv" class="is-underlined">badass designer</nuxt-link> & a
-                        <nuxt-link to="#padam" class="is-underlined">full-stack programmer on steroids</nuxt-link> . This
-                        duo brings in
-                        diverse skills sets ranging from 0 to N ( almost everything )
+                    <p class="heading mt-5">
+                            ABOUT US</p>
+                    <p class="title is-size-4">
+                        Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
+                        MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
+                        <br>
+                        <br>
+                        In 2011, he established Shine Bhola Studios in Jaipur and is living his passion since then.
                     </p>
                     <div class="py-6">
 
-                        <p class="heading">ABOUT</p>
-                        <p class="title is-size-5">
-                            Design & development studio crafting products people fall in love with.
-                        </p>
-                        <p class="title is-size-5">
+                        <p class="heading">
+                            OUR BELIEF</p>
+                        <p class="is-size-5">
+                            The best way to describe his approach: ‘My true passion for photography is in its power to
+                            fascinate and teach new lessons every day! I capture what I feel and feeling is my inner
+                            belief.’ If that’s all you ever know about him, it’s enough to say you know him very, very well
+                            !
 
-                            From initial brand strategy to design and implementation, we help businesses and startups craft
-                            brands that can't be ignored.
-                            <br>
-                            <br>
-                            We translate research into solutions, creating striking and unified brands, interfaces, apps and
-                            systems that resonate with your audience and drive business growth.
+
                         </p>
+
+                        <p class="heading mt-5">
+                            OUR WORK</p>
+                        <p class=" is-size-5 ">
+
+                            His work spans from landscape, architecture, portraits, product, fashion and conceptual
+                            photography. And to share his knowledge of perfect frames, he is a faculty at most of the
+                            prestigious colleges of Jaipur, namely, Aayojan School of Architecture, ICG, IICD, MNIT and has
+                            conducted workshop for IIID.
+
+
+                        </p>
+
                     </div>
-                    <br>
-                    <div class="py-6">
 
-                        <p class="heading">ETHOS</p>
-                        <p class="title is-size-5">
-
-                            We believe in collaboration, transperancy & building it in the open
-                        </p>
-                    </div>
-                    <br>
                 </div>
                 <div class="column is-4 is-offset-1-desktop">
                     <figure class="image is-4by5">
@@ -45,60 +49,10 @@
 
 
             </div>
-            <p class="heading">OUR TEAM</p>
-            <br>
-            <div class="columns">
-                <div id="dhruv" class="column is-4-desktop">
-                    <figure class="image has-background-secondary is-rounded  is-128x128">
-                        <img src="" class="is-rounded" alt="">
-                    </figure>
-                    <br>
-                    <p class="heading">BADASS DESIGNER</p>
-                    <p class="title is-size-5">
-                        Dhruv Saxena
-                    </p>
-                    <p class="subtitle is-size-5">
-
-                        From initial brand strategy to design and implementation, we help businesses and startups craft
-                        brands that can't be ignored.
-                        <br>
-                        <br>
-                        We translate research into solutions, creating striking and unified brands, interfaces, apps and
-                        systems that resonate with your audience and drive business growth.
-                    </p>
-                    <a href="" class="has-text-dark is-underlined">Instagram ↗</a> <br>
-                    <a href="" class="has-text-dark is-underlined">Website →</a><br>
-                    <a href="" class="has-text-dark is-underlined">Email </a>
-
-                </div>
-                <div id="padam" class="column is-4-desktop">
-                    <figure class="image has-background-secondary is-rounded  is-128x128">
-                        <img src="" class="is-rounded" alt="">
-                    </figure>
-                    <br>
-                    <p class="heading">CODER ON STEROIDS</p>
-                    <p class="title is-size-5">
-                        Padam Sethia
-                    </p>
-                    <p class="subtitle is-size-5">
-
-                        From initial brand strategy to design and implementation, we help businesses and startups craft
-                        brands that can't be ignored.
-                        <br>
-                        <br>
-                        We translate research into solutions, creating striking and unified brands, interfaces, apps and
-                        systems that resonate with your audience and drive business growth.
-                    </p>
-                    <a href="" class="has-text-dark is-underlined">Instagram ↗</a> <br>
-                    <a href="" class="has-text-dark is-underlined">Website →</a><br>
-                    <a href="" class="has-text-dark is-underlined">Email </a>
-
-                </div>
-                <br>
 
 
 
-            </div>
+
         </section>
     </div>
 </template>
