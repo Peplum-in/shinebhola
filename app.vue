@@ -127,15 +127,12 @@ const navigation = [
     'name': 'Travel',
     'to': '/',
   },
-  {
-    'name': 'Contact',
-    'to': '/',
-  },
+
 ];
 const sub_navigation = [
   {
     'name': 'About',
-    'to': '/',
+    'to': '/about',
   },
   {
     'name': 'Clients',
@@ -144,6 +141,10 @@ const sub_navigation = [
   {
     'name': 'Services',
     'to': '/',
+  },
+  {
+    'name': 'Contact',
+    'to': '/contact',
   },
 ];
 const follows = [
