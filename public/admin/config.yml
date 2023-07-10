@@ -19,7 +19,7 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'caption', name: 'caption', widget: 'string' }
       - { label: 'tags', name: 'tag',  widget: "relation",
-        collection: "authors" ,
+        collection: "navigation" ,
         searchFields: ["title"],
         valueField: "title",
         displayFields: ["title"] }
@@ -35,4 +35,3 @@ collections:
       - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'Link Text', name: 'link_text', widget: 'string' }
       - { label: 'body', name: 'body', widget: 'markdown' }
-      - { label: 'tags', name: 'tag', widget: 'string' }
