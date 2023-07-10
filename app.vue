@@ -11,11 +11,15 @@
 
           <ul>
             <li>
+              <nuxt-link to="/"
+                class="is-block has-text-dark has-text-weight-semibold pr-3">
 
+              Home
+              </nuxt-link>
               <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
                 class="is-block has-text-dark has-text-weight-semibold pr-3">
 
-                {{ nav.name }}
+                {{ nav.link_text }}
               </nuxt-link>
 
             </li>
@@ -107,6 +111,8 @@
 <script setup>
 const showMobileNav = ref(false)
 
+const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find())
+
 function showNav() {
   showMobileNav.value = !showMobileNav.value
 }
@@ -117,33 +123,6 @@ watch(route, value => {
   showMobileNav.value = false
 }, { deep: true, immediate: true })
 
-const navigation = [
-  {
-    'name': 'Home',
-    'to': '/',
-  },
-  {
-    'name': 'Architecture',
-    'to': '/',
-  },
-  {
-    'name': 'Bespoke',
-    'to': '/',
-  },
-  {
-    'name': 'Product',
-    'to': '/',
-  },
-  {
-    'name': 'Portraits',
-    'to': '/',
-  },
-  {
-    'name': 'Travel',
-    'to': '/',
-  },
-
-];
 const sub_navigation = [
   {
     'name': 'About',

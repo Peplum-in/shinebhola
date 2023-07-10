@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   },
   image: {
     netlify: {
-      baseURL: 'https://peplum.in'
+      baseURL: 'https://shinebhola.netlify.app'
     },
     quality: 80,
     format: ['webp'],

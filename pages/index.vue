@@ -20,16 +20,18 @@
         </div>
         <br>
         <div class="columns is-multiline">
-            <div class="column is-4">
+            <div class="column is-4" v-for="(row,index) in work" :key="index+'_work'+row.title">
                 <figure class="image is-4by5">
-                    <!-- <nuxt-image src="" class="has-background-warning" provider="netlify" format="webp" ></nuxt-image> -->
-                    <img src="" class="has-background-warning" alt="">
+                    <nuxt-img :src="row.image" class="has-background-warning" provider="netlify" loading="lazy" format="webp" sizes="sm:100vw md:50vw lg:800px" />
+                    <!-- <img src="" class="has-background-warning" alt=""> -->
                 </figure>
+                <p class="mt-2 caption">{{ row.caption }}</p>
             </div>
         </div>
     </div>
 </template>
 <script setup>
+const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).find())
 
 
 </script>
