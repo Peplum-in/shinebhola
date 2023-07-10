@@ -1,7 +1,42 @@
 <template>
   <div class="section py-0 ">
-    <div class="columns py-6 is-hidden-touch pt-0">
-      <div class="column is-2">
+    <div class="py-4 is-hidden-desktop">
+      <div class="level is-mobile">
+        <div class="level-left">
+          <div class="level-item">
+            <div>
+              Company Name
+            </div>
+          </div>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <div>
+              <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">Menu
+              </p>
+              <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">Close
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav" v-show="showMobileNav">
+        <ul>
+          <li class="my-3" v-for="(nav, index) in navigation" :key="index">
+
+            <nuxt-link  :to="nav.to"
+            class="has-text-left my-3 has-text-weight-semibold pr-3">
+            
+            {{ nav.link_text }}
+          </nuxt-link>
+        </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="columns py-6-desktop pt-0">
+      <div class="column is-2 is-hidden-touch ">
         <nuxt-link to="/" class="has-text-dark is-size-5">
           Company Name
         </nuxt-link>
@@ -11,10 +46,9 @@
 
           <ul>
             <li>
-              <nuxt-link to="/"
-                class="is-block has-text-dark has-text-weight-semibold pr-3">
+              <nuxt-link to="/" class="is-block has-text-dark has-text-weight-semibold pr-3">
 
-              Home
+                Home
               </nuxt-link>
               <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
                 class="is-block has-text-dark has-text-weight-semibold pr-3">
@@ -67,43 +101,12 @@
           </ul>
         </div>
       </div>
-      <div class="column ">
+      <div class="column is-12-touch ">
         <NuxtPage />
 
       </div>
     </div>
-    <div class="is-hidden-desktop">
-      <div class="level is-mobile">
-        <div class="level-left">
-          <div class="level-item">
-            <div>
-              Company Name
-            </div>
-          </div>
-        </div>
-        <div class="level-right">
-          <div class="level-item">
-            <div>
-              <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">Menu
-              </p>
-              <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">Close
-              </p>
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mobile-nav" v-show="showMobileNav">
-        <ul>
-          <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
-            class="level-item has-text-weight-semibold pr-3">
-
-            {{ nav.name }}
-          </nuxt-link>
-
-        </ul>
-      </div>
-    </div>
 
   </div>
 </template>
