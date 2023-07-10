@@ -1,5 +1,5 @@
 <template>
-  <div class="section py-0 ">
+  <div class="section py-5 ">
     <div class="py-4 is-hidden-desktop">
       <div class="level is-mobile">
         <div class="level-left">
@@ -182,21 +182,13 @@ const abs_contact = [
   font-family: 'DM Sans', sans-serif;
 }
 
-/* html {
-  background-color: #ffd202;
-  scroll-behavior: smooth;
-} */
 
-body {
-  max-width: 100vw;
-  /* min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0px)); */
-  background-color: #fefefe;
-  /* grid-template-rows: auto 1fr; */
-  margin: 0;
-  /* display: grid; */
-  overflow-x: hidden;
-  overflow-y: auto;
+
+html {
+  scroll-behavior: smooth;
 }
+
+
 
 .page-enter-active,
 .page-leave-active {
