@@ -18,10 +18,10 @@ collections:
     fields:
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'caption', name: 'caption', widget: 'string' }
-      - { label: 'tags', name: 'tag',  widget: "relation"
-        collection: "authors"
-        searchFields: ["title"]
-        valueField: "title"
+      - { label: 'tags', name: 'tag',  widget: "relation",
+        collection: "authors" ,
+        searchFields: ["title"],
+        valueField: "title",
         displayFields: ["title"] }
   - name: 'navigation'
     label: 'Navigation'
