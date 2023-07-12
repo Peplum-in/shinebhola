@@ -3,7 +3,7 @@
         <div class="columns">
             <div class="column is-8-desktop">
 
-                <p class="title is-size-5">
+                <p class="title is-size-4">
 
                     Product Photography
                 </p>

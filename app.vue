@@ -5,7 +5,9 @@
         <div class="level-left">
           <div class="level-item">
             <div>
-              Company Name
+              <figure class="image">
+                <img src="/assets/logo.webp" />
+              </figure>
             </div>
           </div>
         </div>
@@ -25,33 +27,31 @@
         <ul>
           <li class="my-3" v-for="(nav, index) in navigation" :key="index">
 
-            <nuxt-link  :to="nav.to"
-            class="has-text-left my-3 has-text-weight-semibold pr-3">
-            
-            {{ nav.link_text }}
-          </nuxt-link>
-        </li>
-          
+            <nuxt-link :to="nav.to" class="has-text-left my-3 has-text-weight-semibold pr-3">
+
+              {{ nav.link_text }}
+            </nuxt-link>
+          </li>
+
         </ul>
       </div>
     </div>
     <div class="columns py-6-desktop pt-0">
       <div class="column is-2 is-hidden-touch ">
+        <img src="/assets/logo.webp" style="width:220px" />
         <nuxt-link to="/" class="has-text-dark is-size-5">
-          Company Name
         </nuxt-link>
-        <p>Brings life to still shots</p>
         <br>
-        <div>
+        <div class="mt-5">
 
           <ul>
             <li>
-              <nuxt-link to="/" class="is-block has-text-dark has-text-weight-semibold pr-3">
+              <nuxt-link to="/" class="is-block side-menu is-size-5 has-text-dark pb-1 has-text-weight-semibold pr-3">
 
                 Home
               </nuxt-link>
               <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
-                class="is-block has-text-dark has-text-weight-semibold pr-3">
+                class="is-block has-text-dark side-menu is-size-5 has-text-weight-semibold py-1 pr-3">
 
                 {{ nav.link_text }}
               </nuxt-link>
@@ -62,10 +62,10 @@
         <div class="mb-5 mt-3">
 
           <ul>
-            <li>
+            <li class="">
 
               <nuxt-link v-for="(nav, index) in sub_navigation" :key="index" :to="nav.to"
-                class="is-block  pr-3 has-text-dark">
+                class="is-block  pr-3 has-text-dark side-menu">
 
                 {{ nav.name }}
               </nuxt-link>
@@ -114,17 +114,17 @@
 <script setup>
 const showMobileNav = ref(false)
 
-const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find())
+const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 
 function showNav() {
   showMobileNav.value = !showMobileNav.value
-}
+};
 
 const route = useRoute();
 
 watch(route, value => {
   showMobileNav.value = false
-}, { deep: true, immediate: true })
+}, { deep: true, immediate: true });
 
 const sub_navigation = [
   {
@@ -182,7 +182,17 @@ const abs_contact = [
   font-family: 'DM Sans', sans-serif;
 }
 
+.title {
+  letter-spacing: 1.2px;
+  font-family: 'Moret' , 'Garamond', serif !important;
+  font-weight: normal !important;
 
+}
+
+.side-menu {
+  letter-spacing: 1px;
+  font-family: 'Moret', 'Garamond', serif !important;
+}
 
 html {
   scroll-behavior: smooth;

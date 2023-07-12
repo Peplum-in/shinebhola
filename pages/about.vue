@@ -3,9 +3,9 @@
         <section class="py-0">
             <div class="columns">
                 <div class=" column is-4-desktop ">
-                    <p class="heading mt-5">
+                    <p class="heading">
                             ABOUT US</p>
-                    <p class="title is-size-4">
+                    <p class="title is-size-3">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
                         <br>
