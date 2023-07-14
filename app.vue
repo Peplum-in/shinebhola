@@ -50,7 +50,7 @@
 
                 Home
               </nuxt-link>
-              <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="nav.to"
+              <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="'/work/'+nav.link_text"
                 class="is-block has-text-dark side-menu is-size-5 has-text-weight-semibold py-1 pr-3">
 
                 {{ nav.link_text }}
@@ -180,6 +180,10 @@ const abs_contact = [
 
 * {
   font-family: 'DM Sans', sans-serif;
+}
+
+html{
+  background-color:#fff;     
 }
 
 .title {

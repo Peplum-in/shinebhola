@@ -35,3 +35,14 @@ collections:
       - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'Link Text', name: 'link_text', widget: 'string' }
       - { label: 'body', name: 'body', widget: 'markdown' }
+  - name: 'clients'
+    label: 'Clients'
+    folder: 'content/clients'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'client name', name: 'client', widget: 'string' }
+      - { label: 'Image ( uplaod in 1by1 ratio)', name: 'image', widget: 'image' }

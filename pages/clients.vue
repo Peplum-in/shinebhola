@@ -4,10 +4,7 @@
             <div class="columns">
                 <div class=" column is-6-desktop ">
                     <p class="title ">
-                        Set up in 2023 by a <nuxt-link to="#dhruv" class="is-underlined">badass designer</nuxt-link> & a
-                        <nuxt-link to="#padam" class="is-underlined">full-stack programmer on steroids</nuxt-link> . This
-                        duo brings in
-                        diverse skills sets ranging from 0 to N ( almost everything )
+                       Our Clients
                     </p>
 
 
@@ -18,7 +15,7 @@
 
             <div class="columns mt-6">
                 <div class="column is-2">
-                    <figure class="image is-4by5">
+                    <figure class="image is-128x128 has-background-warning"> 
                         <img src="" class="has-background-warning" alt="">
                     </figure>
                 </div>
