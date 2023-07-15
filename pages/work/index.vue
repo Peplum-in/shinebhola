@@ -8,7 +8,7 @@
                         <nuxt-img provider="netlify" loading="lazy" format="webp" sizes="sm:100vw md:50vw lg:800px" />
                     </figure>
                     <div class="columns is-centered mt-3">
-                        <div class="column is-4-desktop is-12-touch">
+                        <div class="column is-3-desktop is-12-touch">
                             <!-- <p class="title is-size-3-desktop is-size-4-touch">{{ row.title }}</p> -->
                             <!-- <p class="subtitle ">{{ row.time }}</p> -->
                         </div>

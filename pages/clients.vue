@@ -43,6 +43,7 @@
 </template>
 
 <script setup>
+const { data: clients } = await useAsyncData('clients', () => queryContent('/clients').only(['image', 'client']).find())
 
 </script>
 

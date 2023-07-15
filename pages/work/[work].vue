@@ -7,19 +7,14 @@
 
                     {{ photo_string }} </p>
                 <p class="subtitle is-size-6">
-                    The products are the static entities that I see and work with every day. To be significant, products are
-                    objects
-                    that we want to touch and feel rather seeing them in images. For this reason, I always add a story
-                    behind
-                    every
-                    product I work with.
+                  {{ page[0].description }}
 
                 </p>
             </div>
         </div>
         <br>
         <div class="columns is-multiline">
-            <div class="column is-4" v-for="(row, index) in work" :key="index + '_work' + row.title">
+            <div class="column is-3-desktop" v-for="(row, index) in work" :key="index + '_work' + row.title">
                 <figure class="image is-4by5">
                     <nuxt-img :src="row.image" class="has-background-warning" provider="netlify" loading="lazy"
                         format="webp" sizes="sm:100vw md:50vw lg:800px" />
@@ -37,6 +32,7 @@ function getCapitalizedText(text) {
 }
 const photo_string = getCapitalizedText(route.params.work) + ' Photography';
 const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).where({ 'tag': photo_string }).find())
+const { data: page } = await useAsyncData('nav', () => queryContent('/nav').where({ 'title': photo_string }).find())
 
 
 </script>

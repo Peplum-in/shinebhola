@@ -6,7 +6,7 @@
           <div class="level-item">
             <div>
               <figure class="image">
-                <img src="/assets/logo.webp" />
+                <img src="/assets/shinebhola.svg" />
               </figure>
             </div>
           </div>
@@ -38,7 +38,7 @@
     </div>
     <div class="columns py-6-desktop pt-0">
       <div class="column is-2 is-hidden-touch ">
-        <img src="/assets/logo.webp" style="width:220px" />
+        <img src="/assets/shinebhola.svg" style="width:220px" />
         <nuxt-link to="/" class="has-text-dark is-size-5">
         </nuxt-link>
         <br>
@@ -203,7 +203,7 @@ html {
 }
 
 
-
+/* 
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
@@ -213,5 +213,5 @@ html {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
-}
+} */
 </style>

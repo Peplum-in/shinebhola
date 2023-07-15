@@ -20,7 +20,7 @@
         </div>
         <br>
         <div class="columns is-multiline">
-            <div class="column is-4" v-for="(row,index) in work" :key="index+'_work'+row.title">
+            <div class="column is-3-desktop" v-for="(row,index) in work" :key="index+'_work'+row.title">
                 <figure class="image is-4by5">
                     <nuxt-img :src="row.image" class="has-background-warning" provider="netlify" loading="lazy" format="webp" sizes="sm:100vw md:50vw lg:800px" />
                     <!-- <img src="" class="has-background-warning" alt=""> -->
