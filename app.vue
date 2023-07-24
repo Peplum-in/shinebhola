@@ -234,7 +234,7 @@ html {
 
 .brandtype-mobile {
   padding: 0 !important;
-  font-size: 1.7rem;
+  font-size: 1rem;
   letter-spacing: 10px;
   /* animation: weights 5s linear ; */
   font-weight: 900;
@@ -314,12 +314,14 @@ html {
 @media (max-width: 768px) {
   .masonry {
     column-count: 1 !important;
+    column-gap: 17px !important;
   }
 }
 
 @media (max-width: 992px) {
   .masonry {
     column-count: 2 !important;
+    column-gap: 17px !important;
   }
 }
 
