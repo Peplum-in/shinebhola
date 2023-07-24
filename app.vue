@@ -2,8 +2,8 @@
   <div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- <div v-show="showMobileNav" class="blur-overlay"></div> -->
-    <div class="hero  blur-overlay is-fullheight has-background-transparent" v-show="showMobileNav">
+    <!-- <div v-show="showMobileNav.value" class="blur-overlay"></div> -->
+    <div class="hero  blur-overlay is-fullheight has-background-transparent" v-if="showMobileNav.value">
       <div class="hero-header ">
         <div class=" py-4 section container is-hidden-desktop">
           <div class="level  container is-mobile">
@@ -18,10 +18,10 @@
             <div class="level-right">
               <div class="level-item">
                 <div>
-                  <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">
+                  <p @click="showNav" v-if="!showMobileNav.value" class="is-clickable has-text-weight-semibold has-text-dark">
                     Menu
                   </p>
-                  <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">
+                  <p @click="showNav" v-if="showMobileNav.value" class="is-clickable shas-text-weight-semibold has-text-dark">
                     Close
                   </p>
 
@@ -32,28 +32,36 @@
           <div class="mobile-nav">
             <ul>
 
-              <li class="my-3 is-size-5">
+              <nuxt-link to="/" class="my-3 is-size-5">
 
                 Home
-              </li>
+              </nuxt-link>
               <li class="my-3 is-size-5">
 
                 Work +
               </li>
-              <li class="my-3 " v-for="(nav, index) in navigation" :key="index">
+
+              <li :to="'/work/' + nav.title" class="my-3 " v-for="(nav, index) in navigation" :key="index">
 
                 <nuxt-link :to="nav.to" class="pl-4 has-text-left my-3 is-size-5 pr-3">
 
                   {{ nav.link_text }}
+                  <!-- <li>
+                  </li> -->
                 </nuxt-link>
               </li>
-              <li class="my-3 is-size-5">
+              <li>
+              <nuxt-link to="/about" class="my-3 is-size-5">
 
                 About
-              </li>
-              <li class="my-3 is-size-5">
+              </nuxt-link>
+            </li>
+              <li>
 
-                Contact
+                <nuxt-link to="/contact" class="my-3 is-size-5">
+                  
+                  Contact
+                </nuxt-link>
               </li>
 
             </ul>
@@ -62,8 +70,8 @@
       </div>
       <div class="hero-footer py-4 section">
         <ul>
-          <li><a href="" class="is-size-5 has-text-dark">info@shinebhola.com</a></li>
-          <li><a href="" class="is-size-5 has-text-dark">+91-7073077042</a></li>
+          <li><a href="mailto:info@shinebhola.com" class="is-size-5 has-text-dark">info@shinebhola.com</a></li>
+          <li><a href="tel:917073077042" class="is-size-5 has-text-dark">+91-7073077042</a></li>
           <li><a href="" class="is-size-5 has-text-dark">Facebook</a> - <a href=""
               class="is-size-5 has-text-dark">Instagram</a></li>
         </ul>
@@ -82,9 +90,9 @@
         <div class="level-right">
           <div class="level-item">
             <div>
-              <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">Menu
+              <p @click="showNav" v-if="!showMobileNav.value" class="is-clickable has-text-weight-semibold has-text-dark">Menu
               </p>
-              <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">
+              <p @click="showNav" v-if="showMobileNav.value" class="is-clickable shas-text-weight-semibold has-text-dark">
                 Close
               </p>
 
@@ -92,7 +100,7 @@
           </div>
         </div>
       </div>
-      <div class="mobile-nav" v-show="showMobileNav">
+      <div class="mobile-nav" v-show="showMobileNav.value">
         <ul>
           <li class="my-3" v-for="(nav, index) in navigation" :key="index">
 
@@ -150,8 +158,11 @@
 </template>
 
 <script setup>
-const showMobileNav = ref(true)
 
+
+const showMobileNav = reactive({
+      value: false
+  })
 const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 
 function showNav() {
@@ -161,6 +172,7 @@ function showNav() {
 const route = useRoute();
 
 watch(route, value => {
+  console.log(route)
   showMobileNav.value = false
 }, { deep: true, immediate: true });
 
