@@ -7,22 +7,27 @@
 
                     {{ photo_string }} </p>
                 <p class="subtitle is-size-6">
-                  {{ page[0].description }}
+                    {{ page[0].description }}
 
                 </p>
             </div>
         </div>
         <br>
-        <div class="columns is-multiline">
-            <div class="column is-3-desktop" v-for="(row, index) in work" :key="index + '_work' + row.title">
-                <figure class="image is-4by5">
-                    <nuxt-img :src="row.image" class="has-background-warning" provider="netlify" loading="lazy"
-                        format="webp" sizes="sm:100vw md:50vw lg:800px" />
-                    <!-- <img src="" class="has-background-warning" alt=""> -->
-                </figure>
-                <p class="mt-2 caption">{{ row.caption }}</p>
+        <div class="masonry ">
+
+            <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'"
+                v-for="(row, index) in work">
+                <div class="image-mason ">
+
+                    <figure class="image  has-background-grey">
+                        <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400"
+                            placeholder quality="80" loading="lazy" :src="row.image" />
+                    </figure>
+
+                </div>
             </div>
         </div>
+
     </div>
 </template>
 <script setup>
