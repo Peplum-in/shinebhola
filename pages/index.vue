@@ -18,7 +18,7 @@
 
         </div>
 
-        <div class="columns is-variable is-8 is-multiline">
+        <div class="columns mb-6 is-variable is-8 is-multiline">
             <div class="column is-4">
                 <p class="heading">
                     ABOUT US</p>
