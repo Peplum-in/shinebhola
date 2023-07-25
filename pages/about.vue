@@ -2,10 +2,13 @@
     <div>
         <section class="py-0">
             <div class="columns">
-                <div class=" column is-4-desktop ">
+                <div class="animate__animated animate__fadeIn animated_slow column is-5-desktop ">
+                    <figure class="is-hidden-desktop image is-4by5 mb-6 animate__animated animate__fadeInUp">
+                        <nuxt-img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
+                    </figure>
                     <p class="heading">
                             ABOUT US</p>
-                    <p class="title is-size-3">
+                    <p class="title is-size-4-desktop is-size-5-touch">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
                         <br>
@@ -16,7 +19,7 @@
 
                         <p class="heading">
                             OUR BELIEF</p>
-                        <p class="is-size-5">
+                        <p class="is-size-5-desktop is-size-6-touch">
                             The best way to describe his approach: ‘My true passion for photography is in its power to
                             fascinate and teach new lessons every day! I capture what I feel and feeling is my inner
                             belief.’ If that’s all you ever know about him, it’s enough to say you know him very, very well
@@ -27,7 +30,7 @@
 
                         <p class="heading mt-5">
                             OUR WORK</p>
-                        <p class=" is-size-5 ">
+                        <p class=" is-size-5-desktop is-size-6-touch ">
 
                             His work spans from landscape, architecture, portraits, product, fashion and conceptual
                             photography. And to share his knowledge of perfect frames, he is a faculty at most of the
@@ -40,9 +43,9 @@
                     </div>
 
                 </div>
-                <div class="column is-4 is-offset-1-desktop">
-                    <figure class="image is-4by5">
-                        <img src="" class="has-background-warning" alt="">
+                <div class="column is-6 is-offset-1-desktop is-hidden-touch">
+                    <figure class="image is-4by5 mt-5 animate__animated animate__fadeInUp">
+                        <nuxt-img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
                     </figure>
                 </div>
                 <br>

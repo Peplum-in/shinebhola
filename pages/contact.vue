@@ -1,20 +1,24 @@
 <template>
     <div class="">
         <div class="">
+            <p class="heading">CONTACT</p>
+            <ul>
 
-            <p class="title is-size-4 has-text-weight-normal">
-                Contact us
-            </p>
+
+                <li><a href="mailto:info@shinebhola.com" class=" is-size-6 has-text-dark">info@shinebhola.com</a></li>
+                <li><a href="tel:917073077042" class="is-size-6  has-text-dark">+91-7073077042</a></li>
+                <li class="">Facebook-<a href="" class="is-size-6 has-text-dark  is-underlined">@shinebhola</a>
+                </li>
+                <li class="">Instagram-
+                    <a href="" class="is-size-6 has-text-dark  is-underlined">@shinebhola</a>
+                </li>
+            </ul>
             <br>
-            <p class="is-size-5 mb-6">
+            <p class="is-size-5-desktop is-is-size-6-touch mb-6">
                 Tell us about your project or just say hello!
 
                 Drop us a line.</p>
-            <!-- <p class="is-size-5">In the meantime, vibe with ous to our in-house
-                <a class="" href="https://music.youtube.com/channel/UCT48WYUE7S94SPTwTeljaRQ">
-                    📎 mellow playlist
-                </a>
-            </p> -->
+
             <form class="" @submit="sendMessage()">
                 <div class="columns">
                     <div class="column is-5-desktop">

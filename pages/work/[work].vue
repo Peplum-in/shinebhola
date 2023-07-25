@@ -1,18 +1,10 @@
 <template>
     <div>
-        <div class="columns">
-            <div class="column is-8-desktop">
+       
+        <p class="mb-4 is-hidden-desktop heading tag is-outlined is-dark  is-rounded ">
 
-                <p class="title is-size-4">
+            {{ route.params.work }} </p>
 
-                    {{ photo_string }} </p>
-                <p class="subtitle is-size-6">
-                    {{ page[0].description }}
-
-                </p>
-            </div>
-        </div>
-        <br>
         <div class="masonry ">
 
             <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'"
@@ -41,3 +33,8 @@ const { data: page } = await useAsyncData('nav', () => queryContent('/nav').wher
 
 
 </script>
+
+<style>
+
+
+</style>
