@@ -45,19 +45,23 @@
 
                 Home
               </nuxt-link>
-              <li class="my-3 has-text-dark is-size-6">
+              <li @click="showSubMobileNav.isOpen = !showSubMobileNav.isOpen" class="my-3 has-text-dark is-size-6">
 
-                Work +
+                Work 
+                <span v-if="!showSubMobileNav.isOpen" class="ml-2">+</span>
+                <span v-if="showSubMobileNav.isOpen" class="ml-2">−</span>
               </li>
+              <div class="animate__animated animate__slideIn" v-if="showSubMobileNav.isOpen">
+                <li class="my-3" v-for="(nav, index) in navigation" :key="index">
 
-              <li class="my-3 " v-for="(nav, index) in navigation" :key="index">
+                  <nuxt-link @click="() => { showMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
+                    class="pl-6  has-text-dark  has-text-left  is-size-6 pr-3">
 
-                <nuxt-link @click="() => { showMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
-                  class="pl-4  has-text-dark  has-text-left  is-size-6 pr-3">
-
-                  {{ nav.link_text }}
-                </nuxt-link>
-              </li>
+                    {{ nav.link_text }}
+                  </nuxt-link>
+                </li>
+             
+              </div>
               <li>
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/about"
                   class="my-3  has-text-dark  is-size-6">
@@ -65,10 +69,10 @@
                   About
                 </nuxt-link>
               </li>
-              <li>
+              <li class="mt-3">
 
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/contact"
-                  class="my-3 has-text-dark  is-size-6">
+                  class=" has-text-dark  is-size-6">
 
                   Contact
                 </nuxt-link>
@@ -153,7 +157,7 @@
           <NuxtPage />
 
 
-        
+
 
         </section>
       </div>
@@ -167,6 +171,9 @@
 
 
 const showMobileNav = reactive({
+  isOpen: false
+})
+const showSubMobileNav = reactive({
   isOpen: false
 })
 const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());

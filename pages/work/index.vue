@@ -34,8 +34,3 @@ const { data: posts } = await useAsyncData('work', () => queryContent('/work').f
 
 </script>
   
-<style>
-/* 
-
-*/
-</style>
