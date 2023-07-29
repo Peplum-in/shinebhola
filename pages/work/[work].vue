@@ -31,7 +31,7 @@ function getCapitalizedText(text) {
 }
 const photo_string = getCapitalizedText(route.params.work);
 const text_string = getCapitalizedText(route.params.work);
-const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image']).where({ 'tag': photo_string }).find())
+const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image']).where({ 'tag': route.params.work }).find())
 // const { data: page } = await useAsyncData('nav', () => queryContent('/nav').where({ 'title': photo_string }).find())
 
 
