@@ -1,33 +1,79 @@
 <template>
     <div>
-        <div class="columns">
-            <div class="column is-8-desktop">
+        <div class="masonry ">
 
-                <p class="title is-size-4">
+            <div class="brick animate__animated animate__slideInUp " :key="index + 'images_item'"
+                v-for="(row, index) in work">
+                <div class="image-mason ">
 
-                    Product Photography
-                </p>
-                <p class="subtitle is-size-6">
-                    The products are the static entities that I see and work with every day. To be significant, products are
-                    objects
-                    that we want to touch and feel rather seeing them in images. For this reason, I always add a story
-                    behind
-                    every
-                    product I work with.
-
-                </p>
+                    <figure class="image  has-background-grey">
+                        <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400"
+                            placeholder quality="80" loading="lazy" :src="row.image" />
+                    </figure>
+                    <div class=" mt-1 mb-4">
+                    </div>
+                </div>
             </div>
+
+
+
         </div>
-        <br>
-        <div class="columns is-multiline">
-            <div class="column is-3-desktop" v-for="(row,index) in work" :key="index+'_work'+row.title">
-                <figure class="image is-4by5">
-                    <nuxt-img :src="row.image" class="has-background-warning" provider="netlify" loading="lazy" format="webp" sizes="sm:100vw md:50vw lg:800px" />
-                    <!-- <img src="" class="has-background-warning" alt=""> -->
-                </figure>
-                <p class="mt-2 caption">{{ row.caption }}</p>
+
+        <div class="columns mb-6 is-variable is-8 is-multiline">
+            <div class="column is-4">
+                <p class="heading">
+                    ABOUT US</p>
+                <p class="is-size-6">
+                    Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
+                    MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
+
+                    <br>
+                    In 2011, he established Shine Bhola Studios in Jaipur and is living his passion since then.
+                </p>
+
             </div>
+
+            <div class="column is-4">
+
+
+
+                <p class="heading">
+                    INFO</p>
+                <p class=" ">
+
+                <ul>
+
+
+                    <li><a href="mailto:info@shinebhola.com" class=" is-size-6 has-text-dark">info@shinebhola.com</a></li>
+                    <li><a href="tel:917073077042" class="is-size-6  has-text-dark">+91-7073077042</a></li>
+                    <li class="">Facebook-<a href="" class="is-size-6 has-text-dark  is-underlined">@shinebhola</a>
+                    </li>
+                    <li class="">Instagram-
+                        <a href="" class="is-size-6 has-text-dark  is-underlined">@shinebhola</a>
+                    </li>
+                </ul>
+
+
+                </p>
+
+
+            </div>
+            <div class="column is-4">
+
+                <p class="heading">
+                    CLIENTS</p>
+                <p class="">
+                    BBC, Takenama, Durlabhji, Nila House, Conde Nast, Good Earth, Whirlpool, SDMH, SEDRAA'S School of
+                    Architecture
+
+                </p>
+
+            </div>
+
+
         </div>
+
+
     </div>
 </template>
 <script setup>
