@@ -3,8 +3,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- <div v-show="showMobileNav.isOpen" class="blur-overlay"></div> -->
-    <div class="hero  blur-overlay   animate__faster is-fullheight-with-navbar has-background-transparent"
-      :class="{ 'animate__animated animate__fadeIn': showMobileNav.isOpen, 'animate__animated animate__fadeOut': !showMobileNav.isOpen }"
+    <div class="hero  blur-overlay  is-fullheight-with-navbar has-background-transparent"
       v-if="showMobileNav.isOpen">
       <div class="hero-header ">
         <div class=" py-4 section container is-hidden-desktop">
@@ -52,7 +51,7 @@
                 <span v-if="!showSubMobileNav.isOpen" class="ml-2">+</span>
                 <span v-if="showSubMobileNav.isOpen" class="ml-2">−</span>
               </li>
-              <div class="animate__animated animate__slideIn" v-if="showSubMobileNav.isOpen">
+              <div class="" v-if="showSubMobileNav.isOpen">
                 <li class="my-3" v-for="(nav, index) in navigation" :key="index">
 
                   <nuxt-link @click="() => { showMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
@@ -160,7 +159,7 @@
       </div>
       <div class="">
         <section class=" container ">
-          <NuxtPage />
+          <NuxtPage class="" />
 
 
 
