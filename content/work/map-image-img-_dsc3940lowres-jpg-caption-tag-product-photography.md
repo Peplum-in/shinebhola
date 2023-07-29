@@ -1,5 +1,5 @@
 ---
-image: /img/_dsc3940lowres.jpg
+image: /img/dsc_8459-high-key-bw.jpg
 caption: .
-tag: Product Photography
+tag: product
 ---
