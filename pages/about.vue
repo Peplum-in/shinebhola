@@ -3,7 +3,7 @@
         <section class="py-0">
             <div class="columns">
                 <div class="animate__animated animate__fadeIn animated_slow column is-5-desktop ">
-                    <figure class="is-hidden-desktop image is-4by5 mb-6 animate__animated animate__fadeInUp">
+                    <figure class="is-hidden-desktop image is-4by5 mb-6 animate__animated animate__slideInUp">
                         <img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
                     </figure>
                     <p class="heading">
@@ -44,7 +44,7 @@
 
                 </div>
                 <div class="column is-6 is-offset-1-desktop is-hidden-touch">
-                    <figure class="image is-4by5 mt-5 animate__animated animate__fadeInUp">
+                    <figure class="image is-4by5 mt-5 animate__animated animate__slideInUp">
                         <img  src="/img/shineshine.jpg" class="has-background-warning" alt="" />
                     </figure>
                 </div>

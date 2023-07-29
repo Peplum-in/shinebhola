@@ -7,7 +7,7 @@
 
         <div class="masonry ">
 
-            <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'"
+            <div class="brick animate__animated animate__slideInUp " :key="index + 'images_item'"
                 v-for="(row, index) in work">
                 <div class="image-mason ">
 

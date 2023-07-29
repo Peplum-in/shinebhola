@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- <div v-show="showMobileNav.isOpen" class="blur-overlay"></div> -->
-    <div class="hero  blur-overlay   animate__faster is-fullheight has-background-transparent"
+    <div class="hero  blur-overlay   animate__faster is-fullheight-with-navbar has-background-transparent"
       :class="{ 'animate__animated animate__fadeIn': showMobileNav.isOpen, 'animate__animated animate__fadeOut': !showMobileNav.isOpen }"
       v-if="showMobileNav.isOpen">
       <div class="hero-header ">
@@ -45,9 +45,10 @@
 
                 Home
               </nuxt-link>
-              <li @click="showSubMobileNav.isOpen = !showSubMobileNav.isOpen" class="my-3 has-text-dark is-size-6">
+              <li @click="showSubMobileNav.isOpen = !showSubMobileNav.isOpen"
+                class="my-3 is-clickable has-text-dark is-size-6">
 
-                Work 
+                Work
                 <span v-if="!showSubMobileNav.isOpen" class="ml-2">+</span>
                 <span v-if="showSubMobileNav.isOpen" class="ml-2">−</span>
               </li>
@@ -60,7 +61,7 @@
                     {{ nav.link_text }}
                   </nuxt-link>
                 </li>
-             
+
               </div>
               <li>
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/about"
@@ -132,18 +133,22 @@
             <!-- <div class="level-item">
             </div> -->
             <div class="level-right">
-              <nuxt-link to="/" class="level-item has-text-black ">Home</nuxt-link>
-              <nuxt-link to="/about" class="level-item has-text-black ">About</nuxt-link>
-              <nuxt-link to="/work" class="level-item has-text-black ">Work</nuxt-link>
-              <nuxt-link to="/contact" class="level-item has-text-black ">Contact</nuxt-link>
+              <nuxt-link :class="{ 'main-item-active': route.path == '/' }" to="/"
+                class="level-item main-item has-text-black mr-5 ">Home</nuxt-link>
+              <nuxt-link to="/about" :class="{ 'main-item-active': route.path == '/about' }"
+                class="level-item main-item has-text-black mr-5 ">About</nuxt-link>
+              <nuxt-link to="/work" :class="{ 'main-item-active': route.path.includes('work') }"
+                class="level-item main-item has-text-black  mr-5">Work</nuxt-link>
+              <nuxt-link to="/contact" :class="{ 'main-item-active': route.path == '/contact' }"
+                class="level-item main-item has-text-black">Contact</nuxt-link>
             </div>
           </div>
           <div class="level mb-0 py-0">
             <div class="level-left">
 
               <div class="level-item" v-for="(nav, index) in navigation" :key="index">
-                <nuxt-link :to="'/work/' + nav.link_text" class="has-text-dark heading tag is-notoutlined"
-                  :class="{ 'tag is-outlined is-dark  is-rounded': route.params.work == nav.link_text }">
+                <nuxt-link :to="'/work/' + nav.link_text" class=" has-hover has-text-dark heading tag is-notoutlined"
+                  :class="{ 'tag is-outlined is-dark   is-rounded': route.params.work == nav.link_text }">
 
                   {{ nav.link_text }}
                 </nuxt-link>
@@ -158,9 +163,27 @@
 
 
 
-
         </section>
+        <footer class="container has-background-transparent px-0 pb-0 footer">
+
+          <div class="level is-mobile">
+            <div class="level-left">
+              <div class="level-item">
+                <div class="has-text-dark">
+                  ©️2023 Shine Bhola <br>
+                  All Rights Reserved.
+                </div>
+              </div>
+            </div>
+            <div class="level-right">
+              <div @click="scrollToTop" class="level-item main-item-active is-inline is-clickable">
+                Scroll Back to Top ↑
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
+
 
 
     </div>
@@ -180,6 +203,9 @@ const { data: navigation } = await useAsyncData('navigation', () => queryContent
 
 function showNav() {
   showMobileNav.isOpen = !showMobileNav.isOpen
+};
+function scrollToTop() {
+  window.scrollTo(0, 0);
 };
 
 const route = useRoute();
@@ -264,7 +290,7 @@ html {
   font-weight: 900;
 }
 
-/* .page-enter-active,
+.page-enter-active,
 .page-leave-active {
   transition: all 0.4s ease-in;
 }
@@ -272,13 +298,28 @@ html {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-} */
+}
 
 .title {
   letter-spacing: 2px;
   /* font-family: 'Moret' , 'Garamond', serif !important; */
   font-weight: normal !important;
 
+}
+
+
+.main-item {
+  transition: 0.4s all ease-in;
+}
+
+.main-item:hover {
+  border-bottom: 1px solid #0a0a0a;
+  transition: 0.4s all ease-in;
+}
+
+.main-item-active {
+  border-bottom: 1px solid #0a0a0a;
+  transition: 0.4s all ease-in;
 }
 
 .side-menu {
@@ -371,6 +412,15 @@ html {
 .tag.is-notoutlined {
   background-color: #fff;
   text-decoration: none;
+  transition: 0.2s all ease-in;
+}
+
+.tag.is-notoutlined:hover {
+  background-color: rgb(240, 240, 240);
+  border-radius: 9999px;
+  ;
+
+  /* text-decoration: none; */
 }
 
 a.tag:hover {
@@ -381,7 +431,7 @@ a.tag:hover {
 
   border: 1px solid #0a0a0a;
   background-color: #fff;
-  ;
   color: #0a0a0a;
+  transition: 0.2s all ease-in;
 }
 </style>
