@@ -124,6 +124,7 @@
 
       <!-- Type 2 -->
       <div class=" is-hidden-touch ">
+
         <div class="section container pt-0 px-0">
           <div class="level my-0">
 
@@ -169,7 +170,7 @@
           <div class="level is-mobile">
             <div class="level-left">
               <div class="level-item">
-                <div class="has-text-dark">
+                <div class="has-text-grey is-size-7-touch ">
                   ©️2023 Shine Bhola <br>
                   All Rights Reserved.
                 </div>
