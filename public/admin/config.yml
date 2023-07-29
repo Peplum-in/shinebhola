@@ -13,18 +13,16 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    preview_path: "{{filename}}"
-
     editor:
       preview: false
     fields:
       - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'tags', name: 'tag',  widget: "relation",
-      - { label: 'title', required:false, name: 'title', widget: 'string' }
         collection: "navigation" ,
-        searchFields: ["title"],
-        valueField: "title",
-        displayFields: ["title"] }
+        searchFields: ["image"],
+        valueField: "image",
+        displayFields: ["image"] }
   - name: 'navigation'
     label: 'Navigation'
     folder: 'content/nav'
