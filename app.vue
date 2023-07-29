@@ -264,7 +264,7 @@ html {
   font-weight: 900;
 }
 
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
   transition: all 0.4s ease-in;
 }
@@ -272,7 +272,7 @@ html {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-}
+} */
 
 .title {
   letter-spacing: 2px;

@@ -11,7 +11,7 @@
                             placeholder quality="80" loading="lazy" :src="row.image" />
                     </figure>
                     <div class=" mt-1 mb-4">
-</div>
+                    </div>
                 </div>
             </div>
 
