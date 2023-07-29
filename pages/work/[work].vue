@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="work && page">
 
         <p class="mb-4 is-hidden-desktop heading tag is-outlined is-dark  is-rounded ">
 
@@ -7,7 +7,7 @@
 
         <div class="masonry ">
 
-            <div class="brick animate__animated animate__slideInUp " :key="index + 'images_item'"
+            <div class="brick " :key="index + 'images_item'"
                 v-for="(row, index) in work">
                 <div class="image-mason ">
 
