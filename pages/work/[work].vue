@@ -1,5 +1,5 @@
 <template>
-    <div v-if="work && page">
+    <div v-if="work">
 
         <p class="mb-4 is-hidden-desktop heading tag is-outlined is-dark  is-rounded ">
 
@@ -29,10 +29,10 @@ const route = useRoute();
 function getCapitalizedText(text) {
     return text[0].toUpperCase() + text.substring(1)
 }
-const photo_string = getCapitalizedText(route.params.work) + ' Photography';
+const photo_string = getCapitalizedText(route.params.work);
 const text_string = getCapitalizedText(route.params.work);
-const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).where({ 'tag': photo_string }).find())
-const { data: page } = await useAsyncData('nav', () => queryContent('/nav').where({ 'title': photo_string }).find())
+const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image']).where({ 'tag': photo_string }).find())
+// const { data: page } = await useAsyncData('nav', () => queryContent('/nav').where({ 'title': photo_string }).find())
 
 
 </script>
