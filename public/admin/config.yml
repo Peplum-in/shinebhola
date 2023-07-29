@@ -19,9 +19,9 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'tags', name: 'tag',  widget: "relation",
         collection: "navigation" ,
-        searchFields: ["title"],
-        valueField: "title",
-        displayFields: ["title"] }
+        searchFields: ["image"],
+        valueField: "image",
+        displayFields: ["image",'tags'] }
   - name: 'navigation'
     label: 'Navigation'
     folder: 'content/nav'
