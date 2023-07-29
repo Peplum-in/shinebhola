@@ -164,7 +164,7 @@
 
 
         </section>
-        <footer class="container has-background-transparent px-0 pb-0 footer">
+        <footer class="container has-background-transparent mt-6 px-0 pb-0 footer">
 
           <div class="level is-mobile">
             <div class="level-left">
@@ -267,11 +267,27 @@ const abs_contact = [
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Figtree', sans-serif !important;
 }
 
 html {
   background-color: #fff;
+}
+
+
+.button-shine{
+  border:none;
+  border-radius:0;
+  transition: 0.2s all ease-in;
+  padding-bottom:3px;
+  border-bottom:1px solid #000;
+}
+.button-shine:hover{
+  transition: 0.2s all ease-in;
+  /* border:none; */
+  /* border-radius:0;
+  padding-bottom:3px; */
+  /* border-width:2px ; */
 }
 
 .brandtype {
