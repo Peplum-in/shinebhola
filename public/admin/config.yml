@@ -16,13 +16,13 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: 'Image Title', name: 'title', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'tags', name: 'tag',  widget: "relation",
         collection: "navigation" ,
-        searchFields: ["image"],
-        valueField: "image",
-        displayFields: ["image"] }
+        searchFields: ["title"],
+        valueField: "title",
+        displayFields: ["title"] }
   - name: 'navigation'
     label: 'Navigation'
     folder: 'content/nav'
