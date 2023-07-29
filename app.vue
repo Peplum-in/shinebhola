@@ -2,7 +2,6 @@
   <div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- <div v-show="showMobileNav.isOpen" class="blur-overlay"></div> -->
     <div class="hero  blur-overlay  is-fullheight-with-navbar has-background-transparent"
       v-if="showMobileNav.isOpen">
       <div class="hero-header ">
@@ -143,7 +142,7 @@
                 class="level-item main-item has-text-black">Contact</nuxt-link>
             </div>
           </div>
-          <div class="level mb-0 py-0">
+          <div class="level mb-0 py-0" :class="{'is-hidden': route.path.includes('contact')} ">
             <div class="level-left">
 
               <div class="level-item" v-for="(nav, index) in navigation" :key="index">
