@@ -11,16 +11,16 @@
         <p>Jaipur, India</p>
       </div>
       <div class="level-item">
-        <a href="mailto:hellopeplum@gmail.com" target="blank" class="has-text-dark is-underlined">hellopeplum@gmail.com</a>
+        <a href="mailto:hellopeplum@gmail.com" target="blank" class="has-text-white is-underlined">hellopeplum@gmail.com</a>
       </div>
       <div class="level-item">
         <div>
 
           <p>Follow us</p>
           <p>
-            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark mr-2 is-underlined">Instagram,</a>
-            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark mr-2 is-underlined">Behance,</a>
-            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-dark is-underlined">Dribbble</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-white mr-2 is-underlined">Instagram,</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-white mr-2 is-underlined">Behance,</a>
+            <a href="https://instagram.com/peplum.in" target="blank" class="has-text-white is-underlined">Dribbble</a>
           </p>
         </div>
       </div>

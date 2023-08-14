@@ -4,7 +4,7 @@
             <header class="level container">
                 <div class="level-left">
                     <a class="level-item">
-                        <nuxt-link to="/" class="brandtype has-text-black ">SHINE BHOLA</nuxt-link>
+                        <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link>
 
                     </a>
                 </div>

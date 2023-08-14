@@ -7,8 +7,8 @@
       </nuxt-link>
       <div class="level-right">
 
-        <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-dark">Menu</p>
-        <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-dark">Close</p>
+        <p @click="showNav" v-if="!showMobileNav" class="is-clickable has-text-weight-semibold has-text-white">Menu</p>
+        <p @click="showNav" v-if="showMobileNav" class="is-clickable shas-text-weight-semibold has-text-white">Close</p>
       </div>
     </div>
     <div class="mobile-nav" v-show="showMobileNav">
@@ -113,7 +113,7 @@ watch(route, value => {
 }
 
 .navbar-item:hover {
-  background-color: #fff;
+  background-color: #0c0c0c;
 }
 
 /* Animate SVG pelpum Brand */

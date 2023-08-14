@@ -1,31 +1,82 @@
 <template>
-    <div id="recent-works">
-
-        <section class="">
-            <div class="masonry ">
-
-                <div class="brick  " :key="index + 'images_item'"
-                    v-for="(row, index) in posts">
-                    <div class="image-mason ">
-
-                        <figure class="image  has-background-grey">
-                            <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400"
-                                placeholder quality="80" loading="lazy" :src="row.image" />
-                        </figure>
-                        <div class=" mt-1 mb-4">
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div id="recent-works">
+    <div class="section is-hidden-desktop container my-0 py-0 py-0">
+      <div class="mobile-filter ">
 
 
-        </section>
+        <p @click="showFilterMobileNav.isOpen = !showFilterMobileNav.isOpen"
+          class="pb-3 is-clickable has-text-white is-size-6">
 
+          Filter by category
+          <span v-if="!showFilterMobileNav.isOpen" class="ml-2">+</span>
+          <span v-if="showFilterMobileNav.isOpen" class="ml-2">−</span>
+        </p>
+        <div v-show="showFilterMobileNav.isOpen">
+          <p class="py-3" v-for="(nav, index) in navigation" :key="index">
+
+            <nuxt-link @click="() => { showFilterMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
+              class=" is-capitalized has-text-white  has-text-left  is-size-6 pr-3">
+
+              {{ nav.link_text }}
+            </nuxt-link>
+          </p>
+          <br>
+        </div>
+      </div>
     </div>
+    <div class="level px-0 is-mobile is-hidden-touch">
+      <div class="level-left">
+
+        <div class="level-item" >
+          <nuxt-link to="/work/" class=" has-hover has-text-white is-capitalized ">
+
+            All
+          </nuxt-link>
+        </div>
+        <div class="level-item" v-for="(nav, index) in navigation" :key="index">
+          <nuxt-link :to="'/work/' + nav.link_text" class=" has-hover has-text-white is-capitalized "
+            :class="{ 'tag is-outlined is-dark   is-rounded': route.params.work == nav.link_text }">
+
+            {{ nav.link_text }}
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
+    <section class="">
+      <div class="masonry ">
+
+        <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'" v-for="(row, index) in posts">
+          <div class="image-mason ">
+
+            <figure class="image  has-background-dark">
+              <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder
+                quality="80" loading="lazy" :src="row.image" />
+            </figure>
+            <div class=" mt-1 mb-4">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+  </div>
 </template>
   
 <script setup>
 
+const route = useRoute();
+
+const showFilterMobileNav = reactive({
+  isOpen: false
+})
+
+function showFilter() {
+  showFilterMobileNav.isOpen = !showFilterMobileNav.isOpen
+};
+
+const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 
 const { data: posts } = await useAsyncData('work', () => queryContent('/work').find())
 

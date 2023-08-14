@@ -6,6 +6,12 @@ media_folder: public/img
 public_folder: /img
 site_url: https://shinebhola.netlify.app/
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: 'dhzucwklz'
+    api_key: '82xaOW4VSCea9VZa2lb8TQhi8Dw'
+
 collections:
   - name: 'work'
     label: 'Work'

@@ -15,23 +15,23 @@
 
             <div class="columns mt-6">
                 <div class="column is-2">
-                    <figure class="image is-128x128 has-background-warning"> 
-                        <img src="" class="has-background-warning" alt="">
+                    <figure class="image is-128x128 has-background-dark"> 
+                        <img src="" class="has-background-dark" alt="">
                     </figure>
                 </div>
                 <div class="column is-3">
                     <figure class="image is-4by5">
-                        <img src="" class="has-background-warning" alt="">
+                        <img src="" class="has-background-dark" alt="">
                     </figure>
                 </div>
                 <div class="column is-3">
                     <figure class="image is-4by5">
-                        <img src="" class="has-background-warning" alt="">
+                        <img src="" class="has-background-dark" alt="">
                     </figure>
                 </div>
                 <div class="column is-3">
                     <figure class="image is-4by5">
-                        <img src="" class="has-background-warning" alt="">
+                        <img src="" class="has-background-dark" alt="">
                     </figure>
                 </div>
 
@@ -53,6 +53,6 @@ figure.is-rounded {
 }
 
 .has-background-secondary {
-    background-color: #FFF000;
+    background-color: #0c0c0c000;
 }
 </style>

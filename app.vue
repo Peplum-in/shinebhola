@@ -2,76 +2,54 @@
   <div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <div class="hero  blur-overlay  is-fullheight-with-navbar has-background-transparent"
-      v-if="showMobileNav.isOpen">
+    <div class="hero  blur-overlay  is-hidden-desktop  is-fullheight-with-navbar has-background-transparent" v-if="showMobileNav.isOpen" :class="{'animate__animated animate__fadeIn':showMobileNav.isOpen, 'animate__animated animate__fadeOut':!showMobileNav.isOpen}">
       <div class="hero-header ">
         <div class=" py-4 section container is-hidden-desktop">
-          <div class="level  container is-mobile">
-            <div class="level-left">
-              <div class="level-item">
-                <div>
-                  <nuxt-link to="/" class="brandtype-mobile has-text-black ">SHINE BHOLA</nuxt-link>
 
-                </div>
-              </div>
-            </div>
-            <div class="level-right">
-              <div class="level-item">
-                <div>
-                  <p @click="showNav" v-if="!showMobileNav.isOpen"
-                    class="is-clickable has-text-weight-semibold has-text-dark">
-                    Menu
-                  </p>
-                  <p @click="showNav" v-if="showMobileNav.isOpen"
-                    class="is-clickable shas-text-weight-semibold has-text-dark">
-                    Close
-                  </p>
+          <div class="mobile-nav mt-6 pt-6">
 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mobile-nav">
-            <p class="is-size-6">
-              Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from MNIT Jaipur and
-              MFA in Photography from NID Ahmedabad and UCA Farnham.
-            </p>
-            <br>
             <ul>
 
-              <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/" class="my-3 has-text-dark ">
+              <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/" class="my-3 has-text-white ">
 
                 Home
               </nuxt-link>
               <li @click="showSubMobileNav.isOpen = !showSubMobileNav.isOpen"
-                class="my-3 is-clickable has-text-dark is-size-6">
+                class="py-3 is-clickable has-text-white is-size-6">
 
                 Work
                 <span v-if="!showSubMobileNav.isOpen" class="ml-2">+</span>
                 <span v-if="showSubMobileNav.isOpen" class="ml-2">−</span>
               </li>
               <div class="" v-if="showSubMobileNav.isOpen">
-                <li class="my-3" v-for="(nav, index) in navigation" :key="index">
+                <li class="py-3" v-for="(nav, index) in navigation" :key="index">
 
                   <nuxt-link @click="() => { showMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
-                    class="pl-6  has-text-dark  has-text-left  is-size-6 pr-3">
+                    class="pl-6 is-capitalized has-text-white  has-text-left  is-size-6 pr-3">
 
                     {{ nav.link_text }}
                   </nuxt-link>
                 </li>
 
               </div>
-              <li>
+              <li >
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/about"
-                  class="my-3  has-text-dark  is-size-6">
+                  class="py-3  has-text-white  is-size-6">
 
                   About
                 </nuxt-link>
               </li>
+              <li class="mt-3"> 
+                <a @click="() => { showMobileNav.isOpen = false }" href="https://whitegraphite.co.uk"
+                  class="py-3 pt-3 has-text-white  is-size-6">
+
+                  Studio ↗
+                </a>
+              </li>
               <li class="mt-3">
 
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/contact"
-                  class=" has-text-dark  is-size-6">
+                  class=" has-text-white  is-size-6">
 
                   Contact
                 </nuxt-link>
@@ -81,21 +59,14 @@
           </div>
         </div>
       </div>
-      <div class="hero-footer section">
-        <ul>
-          <li><a href="mailto:info@shinebhola.com" class="is-size-6 has-text-dark">info@shinebhola.com</a></li>
-          <li><a href="tel:917073077042" class="is-size-6 has-text-dark">+91-7073077042</a></li>
-          <li><a href="" class="is-size-6 has-text-dark">Facebook</a> - <a href=""
-              class="is-size-6 has-text-dark">Instagram</a></li>
-        </ul>
-      </div>
+
     </div>
-    <div class=" py-4 section container is-hidden-desktop">
-      <div class="level  container is-mobile">
+    <div class=" py-4 sticky-menu section container is-hidden-desktop">
+      <div class="level   container is-mobile " >
         <div class="level-left">
           <div class="level-item">
             <div>
-              <nuxt-link to="/" class="brandtype-mobile has-text-black ">SHINE BHOLA</nuxt-link>
+              <nuxt-link to="/" class="brandtype-mobile has-text-white ">SHINE BHOLA</nuxt-link>
 
             </div>
           </div>
@@ -103,22 +74,22 @@
         <div class="level-right">
           <div class="level-item">
             <div>
-              <p @click="showNav" v-if="!showMobileNav.isOpen"
-                class="is-clickable has-text-weight-semibold has-text-dark">
-                Menu
-              </p>
-              <p @click="showNav" v-if="showMobileNav.isOpen"
-                class="is-clickable shas-text-weight-semibold has-text-dark">
-                Close
-              </p>
+              <div>
+                <ul class="menu" @click="showNav" id="" :class="{ 'open': showMobileNav.isOpen }">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
 
+
+              </div>
             </div>
           </div>
         </div>
       </div>
 
     </div>
-    <div class="section py-5   container">
+    <div class=" py-5   container">
 
       <!-- Type 2 -->
       <div class=" is-hidden-touch ">
@@ -127,60 +98,60 @@
           <div class="level my-0">
 
             <div class="level-left">
-              <nuxt-link to="/" class="brandtype has-text-black ">SHINE BHOLA</nuxt-link>
+              <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link>
             </div>
             <!-- <div class="level-item">
             </div> -->
             <div class="level-right">
-              <nuxt-link :class="{ 'main-item-active': route.path == '/' }" to="/"
-                class="level-item main-item has-text-black mr-5 ">Home</nuxt-link>
               <nuxt-link to="/about" :class="{ 'main-item-active': route.path == '/about' }"
-                class="level-item main-item has-text-black mr-5 ">About</nuxt-link>
+                class="level-item main-item has-text-white mr-5 ">About</nuxt-link>
               <nuxt-link to="/work" :class="{ 'main-item-active': route.path.includes('work') }"
-                class="level-item main-item has-text-black  mr-5">Work</nuxt-link>
+                class="level-item main-item has-text-white  mr-5">Work</nuxt-link>
+              <a href="https://whitegraphite.co.uk" target="blank"
+                :class="{ 'main-item-active': route.path.includes('work') }"
+                class="level-item main-item has-text-white  mr-5">Studio</a>
               <nuxt-link to="/contact" :class="{ 'main-item-active': route.path == '/contact' }"
-                class="level-item main-item has-text-black">Contact</nuxt-link>
+                class="level-item main-item has-text-white">Contact</nuxt-link>
             </div>
           </div>
-          <div class="level mb-0 py-0" :class="{'is-hidden': route.path.includes('contact')} ">
-            <div class="level-left">
 
-              <div class="level-item" v-for="(nav, index) in navigation" :key="index">
-                <nuxt-link :to="'/work/' + nav.link_text" class=" has-hover has-text-dark heading tag is-notoutlined"
-                  :class="{ 'tag is-outlined is-dark   is-rounded': route.params.work == nav.link_text }">
-
-                  {{ nav.link_text }}
-                </nuxt-link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="">
         <section class=" container ">
           <NuxtPage class="" />
-
-
-
         </section>
-        <footer class="container has-background-transparent mt-6 px-0 pb-0 footer">
+        <footer class="section container has-background-transparent is-hidden-touch mt-6 px-0 pb-0 footer">
 
           <div class="level is-mobile">
             <div class="level-left">
               <div class="level-item">
                 <div class="has-text-grey is-size-7-touch ">
-                  ©️2023 Shine Bhola <br>
-                  All Rights Reserved.
+                  ©️2023 Shine Bhola. All Rights Reserved.
                 </div>
               </div>
             </div>
-            <div class="level-right">
-              <div @click="scrollToTop" class="level-item main-item-active is-inline is-clickable">
-                Scroll Back to Top ↑
-              </div>
-            </div>
+
           </div>
         </footer>
+        <footer class="section container is-hidden-desktop has-background-transparent mt-6  pb-0 footer">
+
+          <div class="level is-mobile">
+            <div class="level-left">
+              <div class="level-item">
+                <div class="has-text-grey is-size-7-touch ">
+                  ©️2023 Shine Bhola. All Rights Reserved.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </footer>
+        <div @click="scrollToTop" class="scroller is-clickable">
+          <button class="scrollToTop">
+            ↑
+          </button>
+        </div>
       </div>
 
 
@@ -198,7 +169,6 @@ const showMobileNav = reactive({
 const showSubMobileNav = reactive({
   isOpen: false
 })
-const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 
 function showNav() {
   showMobileNav.isOpen = !showMobileNav.isOpen
@@ -207,58 +177,14 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 };
 
+const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
+
 const route = useRoute();
 
 watch(route, value => {
   showMobileNav.isOpen = false
 }, { deep: true, immediate: true });
 
-const sub_navigation = [
-  {
-    'name': 'About',
-    'to': '/about',
-  },
-  {
-    'name': 'Clients',
-    'to': '/clients',
-  },
-  {
-    'name': 'Services',
-    'to': '/services',
-  },
-  {
-    'name': 'Contact',
-    'to': '/contact',
-  },
-];
-const follows = [
-  {
-    'name': 'Facebook',
-    'to': '/',
-  },
-  {
-    'name': 'Instagram',
-    'to': '/',
-  },
-  {
-    'name': 'Whatsapp',
-    'to': '/',
-  },
-  {
-    'name': 'Email',
-    'to': '/',
-  },
-];
-const abs_contact = [
-  {
-    'name': 'info@shinebhola',
-    'link': 'mailto:info@shinebhola',
-  },
-  {
-    'name': '+91-941-422-7723',
-    'link': 'tel:+91-941-422-7723',
-  },
-];
 
 </script>
 <style>
@@ -270,18 +196,35 @@ const abs_contact = [
 }
 
 html {
-  background-color: #fff;
+  background-color: #0c0c0c;
+  scroll-behavior: smooth;
+
 }
 
 
-.button-shine{
-  border:none;
-  border-radius:0;
+.button-shine {
+  border: none;
+  border-radius: 0;
   transition: 0.2s all ease-in;
-  padding-bottom:3px;
-  border-bottom:1px solid #000;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #fff;
 }
-.button-shine:hover{
+.button-shine-light {
+  border: none;
+  border-radius: 0;
+  transition: 0.2s all ease-in;
+  padding-bottom: 2px;
+  border-bottom: 0.5px solid #ffffff7a;
+}
+.button-shine-two {
+  border: none;
+  border-radius: 0;
+  transition: 0.2s all ease-in;
+  padding-bottom: 4px;
+  border-bottom: 0.5px solid #ffffff9a;
+}
+
+.button-shine:hover {
   transition: 0.2s all ease-in;
   /* border:none; */
   /* border-radius:0;
@@ -297,15 +240,29 @@ html {
   font-weight: 900;
 }
 
+.input{
+  border-radius: 0px !important;
+  background: transparent;
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: #fefefe !important;
+opacity: 0.4;
+}
+.label{
+  color:white;
+}
+
 .brandtype-mobile {
   padding: 0 !important;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 10px;
   /* animation: weights 5s linear ; */
   font-weight: 900;
 }
 
-.page-enter-active,
+/* .page-enter-active,
 .page-leave-active {
   transition: all 0.4s ease-in;
 }
@@ -313,7 +270,7 @@ html {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-}
+} */
 
 .title {
   letter-spacing: 2px;
@@ -355,14 +312,14 @@ html {
   width: 100vw;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 6;
   /* Sit on top */
   left: 0;
   top: 0;
   transition: 1s all ease;
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   /* Black fallback color */
-  background-color: rgba(254, 254, 254, 0.9);
+  background-color: #0c0c0ce0;
   backdrop-filter: blur(4px);
   /* filter: blur(3px); */
   /* Black w/opacity */
@@ -390,9 +347,9 @@ html {
   column-gap: 17px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .masonry {
-    column-count: 2;
+    column-count: 1 !important;
   }
 }
 
@@ -425,7 +382,7 @@ html {
 
 
 .tag.is-notoutlined {
-  background-color: #fff;
+  background-color: #0c0c0c;
   text-decoration: none;
   transition: 0.2s all ease-in;
 }
@@ -445,8 +402,203 @@ a.tag:hover {
 .tag.is-outlined.is-dark {
 
   border: 1px solid #0a0a0a;
-  background-color: #fff;
+  background-color: #0c0c0c;
   color: #0a0a0a;
   transition: 0.2s all ease-in;
+}
+
+
+/*  */
+
+
+a#menu-icon {
+  display: inline-block;
+  padding: 10px;
+}
+
+a#menu-icon .bar {
+  margin: 3px;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 0px;
+
+  transition: margin 0.2s, transform 0.2s;
+
+  /* same as above but with prefixes added */
+  -webkit-transition: margin 0.2s, -webkit-transform 0.2s;
+  transition: margin 0.2s, -webkit-transform 0.2s;
+  -o-transition: margin 0.2s, transform 0.2s;
+  transition: margin 0.2s, transform 0.2s;
+  transition: margin 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+
+a#menu-icon:not(.close):hover {
+  padding: 6px 10px;
+}
+
+a#menu-icon:not(.close):hover .bar {
+  margin: 5px 3px;
+}
+
+a#menu-icon.close .bar:first-child {
+  -webkit-transform: translateY(6px) rotate(45deg);
+  -ms-transform: translateY(6px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+a#menu-icon.close .bar:nth-child(2) {
+  opacity: 0;
+}
+
+a#menu-icon.close .bar:last-child {
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+  -ms-transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Roudn 2 */
+
+
+.menu {
+  cursor: pointer;
+  height: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  /* position: relative; */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.menu li {
+  background-color: #fff;
+  border-radius: 0px;
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .15s ease-in-out;
+  -moz-transition: .15s ease-in-out;
+  -o-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.menu li:nth-child(1) {
+  top: 0;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu li:nth-child(2) {
+  top: 7px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu li:nth-child(3) {
+  top: 14px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.menu.open li:nth-child(1) {
+  left: 4px;
+  top: -1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu.open li:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.menu.open li:nth-child(3) {
+  left: 4px;
+  top: 20px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* .scroller{
+  position: relative;
+} */
+
+.scrollToTop{
+
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  z-index: 5;
+
+  /* hide with opacity */
+  /* opacity: 0; */
+
+  /* also add a translate effect */
+  /* transform: translateY(100px); */
+
+  /* and a transition */
+  transition: all .5s ease;
+
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
+.sticky-menu{
+  position: sticky;
+  top:10px;
+  z-index:9999;
+}
+
+.menu-box{
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.menu-box-open{
+  max-height: 100% !important;
+  transition: all 0.2s ease-out;
 }
 </style>

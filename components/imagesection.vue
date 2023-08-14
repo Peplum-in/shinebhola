@@ -5,7 +5,7 @@
                 <div class="Center-text">
                     <div class="has-text-centered">
                         <div class="is-size-3 has-text-centered" v-for="(nav, index) in navigation" :key="index">
-                            <nuxt-link :to="nav.to" class="is-size-3 has-text-centered has-text-dark side-menu">
+                            <nuxt-link :to="nav.to" class="is-size-3 has-text-centered has-text-white side-menu">
                                 {{ nav.link_text }}
                             </nuxt-link>
                         </div>

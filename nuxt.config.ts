@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+  
   image: {
     netlify: {
       baseURL: 'https://shinebhola.netlify.app'
