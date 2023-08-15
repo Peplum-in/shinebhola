@@ -10,7 +10,7 @@ media_library:
   name: cloudinary
   config:
     cloud_name: 'dhzucwklz'
-    api_key: '82xaOW4VSCea9VZa2lb8TQhi8Dw'
+    api_key: '622753895343754'
     # default_transformations:
     #   - - fetch_format: auto
     #       width: 600
