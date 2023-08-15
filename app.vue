@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- <div v-if="loading" class="fixed left-0 top-0 h-0.5 w-full z-50 bg-green-500" /> -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <div class="hero  blur-overlay  is-hidden-desktop  is-fullheight-with-navbar has-background-transparent" v-if="showMobileNav.isOpen" :class="{'animate__animated animate__fadeIn':showMobileNav.isOpen, 'animate__animated animate__fadeOut':!showMobileNav.isOpen}">
@@ -62,7 +64,7 @@
 
     </div>
     <div class=" py-4 sticky-menu section container is-hidden-desktop">
-      <div class="level   container is-mobile " >
+      <div class="level mt-4 pb-0  container is-mobile sticky-menu-inner" >
         <div class="level-left">
           <div class="level-item">
             <div>
@@ -119,6 +121,7 @@
       </div>
       <div class="">
         <section class=" container ">
+          <NuxtLoadingIndicator  /> 
           <NuxtPage class="" />
         </section>
         <footer class="section container has-background-transparent is-hidden-touch mt-6 px-0 pb-0 footer">
@@ -149,7 +152,7 @@
         </footer>
         <div @click="scrollToTop" class="scroller is-clickable">
           <button class="scrollToTop">
-            ↑
+            Up
           </button>
         </div>
       </div>
@@ -587,8 +590,20 @@ a#menu-icon.close .bar:last-child {
 
 .sticky-menu{
   position: sticky;
-  top:10px;
-  z-index:9999;
+  top:0px;
+  z-index:10;
+  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(2px);
+  mask: linear-gradient(0deg, transparent, black 30%);
+  /* backdrop-filter: brightness(60%);
+  backdrop-filter: contrast(40%); */
+}
+
+.sticky-menu-inner{
+  position: sticky;
+  /* padding-bottom:2rem; */
+  z-index:200;
+
 }
 
 .menu-box{

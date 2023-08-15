@@ -51,7 +51,7 @@
                 </form>
             </div>
         </div>
-        <div class=" is-hidden-desktop section">
+        <div class=" is-hidden-desktop section pt-0">
             <div class="has-text-white">
                 <p class="heading">CONTACT</p>
                 <ul class="">

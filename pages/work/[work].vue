@@ -4,7 +4,7 @@
         <div class="section py-0 mb-4 is-hidden-desktop has-text-white  is-rounded ">
             <div class="level is-mobile ">
                 <nuxt-link to="/work" class="level-left button-shine-light has-text-grey-light">
-                    ← All
+                    All
                 </nuxt-link>
                 <div class="level-right has-text-light">
 

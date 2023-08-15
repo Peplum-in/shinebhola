@@ -11,6 +11,10 @@ media_library:
   config:
     cloud_name: 'dhzucwklz'
     api_key: '82xaOW4VSCea9VZa2lb8TQhi8Dw'
+    # default_transformations:
+    #   - - fetch_format: auto
+    #       width: 600
+    #       quality: 80
 
 collections:
   - name: 'work'
