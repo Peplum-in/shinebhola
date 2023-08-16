@@ -29,6 +29,8 @@ collections:
       preview: false
     fields:
       - { label: 'Image Title', name: 'title', widget: 'string' }
+      - { label: 'order', name: 'Image Order',  widget: "string"}
+      - { label: 'Image Description for SEO', name: 'SEO', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'tags', name: 'tag',  widget: "relation",
         collection: "navigation" ,
