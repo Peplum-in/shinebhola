@@ -8,15 +8,16 @@ site_url: https://shinebhola.netlify.app/
 
 media_library:
   name: cloudinary
-  output_filename_only: false
+  output_filename_only: true
 
   config:
     cloud_name: 'dhzucwklz'
     api_key: '622753895343754'
     default_transformations:
       - - fetch_format: auto
-          width: 600
-          quality: 80
+          width: auto
+          quality: auto
+          dpr: auto
 
 collections:
   - name: 'work'
