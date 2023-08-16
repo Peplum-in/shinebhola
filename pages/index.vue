@@ -2,7 +2,8 @@
     <div>
         <div class="masonry ">
 
-            <div class="brick  animate__animated animate__fadeInUp " :key="index + 'images_item'" v-for="(row, index) in work">
+            <div class="brick  animate__animated animate__fadeInUp " :key="index + 'images_item'"
+                v-for="(row, index) in work">
                 <div class="image-mason ">
 
                     <figure class="image has-background-black">
@@ -68,24 +69,20 @@
             </div>
             <div class="mt-6 has-text-white">
 
-                <p class="heading">
+                <p class="heading has-text-centered">
                     CLIENTS</p>
 
 
-                <div class="columns mt-1">
-                    <!-- {{ clients }} -->
-                    <div class="column is-2 is-1by1" v-for="(row, index) in clients" :key="index + '_client'">
-                        <figure class="image is-1by1 ">
-                            <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400"
-                                placeholder quality="80" loading="lazy" :src="row.image" />
+                <div class="columns is-centered is-variable is-8 is-multiline">
+                    <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
+                        <figure class="image is-1by1  ">
+                            <nuxt-picture :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                                sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
+                                loading="lazy" :src="row.image" />
                         </figure>
                     </div>
                 </div>
-                <!-- <p class="">
-    BBC, Takenama, Durlabhji, Nila House, Conde Nast, Good Earth, Whirlpool, SDMH, SEDRAA'S School of
-    Architecture
 
-</p> -->
 
             </div>
 
@@ -93,7 +90,7 @@
         <div class="is-hidden-desktop section py-0">
 
             <div class=" has-text-white  mb-6 ">
-                <div class="upper-bar">
+                <div class="mt-6">
                     <p class="heading">
                         ABOUT US</p>
                     <p class="is-size-6">
@@ -106,7 +103,7 @@
 
                 </div>
 
-                <div class="upper-bar">
+                <div class="mt-6">
 
 
 
@@ -132,15 +129,20 @@
 
 
                 </div>
-                <div class="upper-bar">
+                <div class="mt-6">
 
                     <p class="heading">
                         CLIENTS</p>
-                    <p class="">
-                        BBC, Takenama, Durlabhji, Nila House, Conde Nast, Good Earth, Whirlpool, SDMH, SEDRAA'S School of
-                        Architecture
+                    <div class="columns is-mobile is-centered is-variable is-8 is-multiline">
+                        <div class="column  is-4-touch " v-for="(row, index) in clients_list" :key="index + '_client'">
+                            <figure class="image is-1by1  ">
+                                <nuxt-picture :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                                    sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
+                                    loading="lazy" :src="row.image" />
+                            </figure>
+                        </div>
+                    </div>
 
-                    </p>
 
                 </div>
 
@@ -156,7 +158,40 @@ const { data: work } = await useAsyncData('work', () => queryContent('/work').on
 
 const { data: clients } = await useAsyncData('clients', () => queryContent('/clients').only(['image', 'client_name']).find())
 
-
+const clients_list = [
+    {
+        'name': 'BBC',
+        'image': '/assets/logo/resized/bbc.png',
+    },
+    {
+        'name': 'Conde Nast',
+        'image': '/assets/logo/resized/condenast.png',
+    },
+    {
+        'name': 'Good Earth',
+        'image': '/assets/logo/resized/goodearth.png',
+    },
+    {
+        'name': 'Enrico',
+        'image': '/assets/logo/resized/enrico.png',
+    },
+    {
+        'name': 'Mitsubishi Electric',
+        'image': '/assets/logo/resized/mitsubishi.png',
+    },
+    {
+        'name': 'Opame',
+        'image': '/assets/logo/resized/opame.png',
+    },
+    {
+        'name': 'Nila House',
+        'image': '/assets/logo/resized/nilahouse.png',
+    },
+    {
+        'name': 'Whirlpool',
+        'image': '/assets/logo/resized/whirlpool.png',
+    },
+]
 </script>
 
 

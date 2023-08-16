@@ -4,7 +4,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <div class="hero  blur-overlay  is-hidden-desktop  is-fullheight-with-navbar has-background-transparent" v-if="showMobileNav.isOpen" :class="{'animate__animated animate__fadeIn':showMobileNav.isOpen, 'animate__animated animate__fadeOut':!showMobileNav.isOpen}">
+    <div class="hero  blur-overlay  is-hidden-desktop  is-fullheight-with-navbar has-background-transparent"
+      v-if="showMobileNav.isOpen"
+      :class="{ 'animate__animated animate__fadeIn': showMobileNav.isOpen, 'animate__animated animate__fadeOut': !showMobileNav.isOpen }">
       <div class="hero-header ">
         <div class=" py-4 section container is-hidden-desktop">
 
@@ -34,14 +36,14 @@
                 </li>
 
               </div>
-              <li >
+              <li>
                 <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/about"
                   class="py-3  has-text-white  is-size-6">
 
                   About
                 </nuxt-link>
               </li>
-              <li class="mt-3"> 
+              <li class="mt-3">
                 <a @click="() => { showMobileNav.isOpen = false }" href="https://whitegraphite.co.uk"
                   class="py-3 pt-3 has-text-white  is-size-6">
 
@@ -64,11 +66,17 @@
 
     </div>
     <div class=" py-4 sticky-menu section container is-hidden-desktop">
-      <div class="level mt-4 pb-0  container is-mobile sticky-menu-inner" >
+      <div class="level mt-4 pb-0  container is-mobile sticky-menu-inner">
         <div class="level-left">
           <div class="level-item">
             <div>
-              <nuxt-link to="/" class="brandtype-mobile has-text-white ">SHINE BHOLA</nuxt-link>
+              <nuxt-link to="/">
+
+                <figure class="image " style="width:200px">
+                  <nuxt-picture width="200" loading="lazy" format="webp" placeholder src="/assets/logo/shinebhola_logo_white.png"></nuxt-picture>
+                </figure>
+              </nuxt-link>
+
 
             </div>
           </div>
@@ -100,7 +108,13 @@
           <div class="level my-0">
 
             <div class="level-left">
-              <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link>
+              <nuxt-link to="/">
+
+                <figure class="image " style="width:500px">
+                  <nuxt-picture width="500" loading="lazy" format="webp" placeholder src="/assets/logo/shinebhola_logo_white.png"></nuxt-picture>
+                </figure>
+              </nuxt-link>
+              <!-- <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link> -->
             </div>
             <!-- <div class="level-item">
             </div> -->
@@ -121,7 +135,7 @@
       </div>
       <div class="">
         <section class=" container ">
-          <NuxtLoadingIndicator  /> 
+          <NuxtLoadingIndicator />
           <NuxtPage class="" />
         </section>
         <footer class="section container has-background-transparent is-hidden-touch mt-6 px-0 pb-0 footer">
@@ -212,6 +226,7 @@ html {
   padding-bottom: 3px;
   border-bottom: 1px solid #fff;
 }
+
 .button-shine-light {
   border: none;
   border-radius: 0;
@@ -219,6 +234,7 @@ html {
   padding-bottom: 2px;
   border-bottom: 0.5px solid #ffffff7a;
 }
+
 .button-shine-two {
   border: none;
   border-radius: 0;
@@ -243,18 +259,20 @@ html {
   font-weight: 900;
 }
 
-.input{
+.input {
   border-radius: 0px !important;
   background: transparent;
 
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-color: #fefefe !important;
-opacity: 0.4;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fefefe !important;
+  opacity: 0.4;
 }
-.label{
-  color:white;
+
+.label {
+  color: white;
 }
 
 .brandtype-mobile {
@@ -554,7 +572,7 @@ a#menu-icon.close .bar:last-child {
   position: relative;
 } */
 
-.scrollToTop{
+.scrollToTop {
 
   background-color: #fff;
   border: none;
@@ -588,10 +606,10 @@ a#menu-icon.close .bar:last-child {
 }
 
 
-.sticky-menu{
+.sticky-menu {
   position: sticky;
-  top:0px;
-  z-index:10;
+  top: 0px;
+  z-index: 10;
   /* backdrop-filter: blur(2px); */
   backdrop-filter: blur(2px);
   mask: linear-gradient(0deg, transparent, black 30%);
@@ -599,21 +617,20 @@ a#menu-icon.close .bar:last-child {
   backdrop-filter: contrast(40%); */
 }
 
-.sticky-menu-inner{
+.sticky-menu-inner {
   position: sticky;
   /* padding-bottom:2rem; */
-  z-index:200;
+  z-index: 200;
 
 }
 
-.menu-box{
+.menu-box {
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-out;
 }
 
-.menu-box-open{
+.menu-box-open {
   max-height: 100% !important;
   transition: all 0.2s ease-out;
-}
-</style>
+}</style>
