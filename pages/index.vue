@@ -167,35 +167,35 @@ const { data: work } = await useAsyncData('work', () => queryContent('/work').on
 const clients_list = [
     {
         'name': 'BBC',
-        'image': '/resized/bbc.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279273/bbc_sf6bbr.png',
     },
     {
         'name': 'Conde Nast',
-        'image': '/resized/condenast.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/condenast_ibqqdn.png',
     },
     {
         'name': 'Good Earth',
-        'image': '/resized/goodearth.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/goodearth_i4ufqf.png',
     },
     {
         'name': 'Enrico',
-        'image': '/resized/enrico.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/enrico_nnw9lm.png',
     },
     {
         'name': 'Mitsubishi Electric',
-        'image': '/resized/mitsubishi.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/mitsubishi_vwcjuz.png',
     },
     {
         'name': 'Opame',
-        'image': '/resized/opame.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279273/opame_yysify.png',
     },
     {
         'name': 'Nila House',
-        'image': '/resized/nilahouse.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/nilahouse_x6x5x8.png',
     },
     {
         'name': 'Whirlpool',
-        'image': '/resized/whirlpool.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/whirlpool_liokqr.png',
     },
 ]
 </script>
