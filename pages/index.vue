@@ -75,9 +75,9 @@
                 <div class="columns is-centered is-variable is-8 is-multiline">
                     <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
                         <figure class="image is-1by1  ">
-                            <nuxt-picture  :alt="'Photography for ' + row.name + ' by Shine Bhola'"
-                                sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
-                                loading="lazy" :src="row.image" />
+                            <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
+
+                          
                         </figure>
                     </div>
                 </div>
@@ -135,9 +135,7 @@
                     <div class="columns is-mobile is-centered is-variable is-8 is-multiline">
                         <div class="column  is-4-touch " v-for="(row, index) in clients_list" :key="index + '_client'">
                             <figure class="image is-1by1  ">
-                                <nuxt-picture  :alt="'Photography for ' + row.name + ' by Shine Bhola'"
-                                    sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
-                                    loading="lazy" :src="row.image" />
+                                <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
                             </figure>
                         </div>
                     </div>
@@ -154,11 +152,11 @@
 </template>
 <script setup>
 
-function cldImage(link){
-    
+function cldImage(link) {
+
     const x = link.split('/upload')
-    const z = x[0]+'/upload/f_webp,q_80,w_600,dpr_auto/'
-    const final = z+x[1]
+    const z = x[0] + '/upload/f_webp,q_80,w_600,dpr_auto/'
+    const final = z + x[1]
     return final
 }
 
@@ -167,35 +165,35 @@ const { data: work } = await useAsyncData('work', () => queryContent('/work').on
 const clients_list = [
     {
         'name': 'BBC',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279273/bbc_sf6bbr.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279273/bbc_sf6bbr.png',
     },
     {
         'name': 'Conde Nast',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/condenast_ibqqdn.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/condenast_ibqqdn.png',
     },
     {
         'name': 'Good Earth',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/goodearth_i4ufqf.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/goodearth_i4ufqf.png',
     },
     {
         'name': 'Enrico',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/enrico_nnw9lm.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/enrico_nnw9lm.png',
     },
     {
         'name': 'Mitsubishi Electric',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/mitsubishi_vwcjuz.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/mitsubishi_vwcjuz.png',
     },
     {
         'name': 'Opame',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279273/opame_yysify.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279273/opame_yysify.png',
     },
     {
         'name': 'Nila House',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/nilahouse_x6x5x8.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/nilahouse_x6x5x8.png',
     },
     {
         'name': 'Whirlpool',
-        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_512/v1692279274/whirlpool_liokqr.png',
+        'image': 'https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400/v1692279274/whirlpool_liokqr.png',
     },
 ]
 </script>
