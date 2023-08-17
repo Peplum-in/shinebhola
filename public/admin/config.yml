@@ -30,10 +30,10 @@ collections:
       preview: false
     fields:
       - { label: 'Image/Video Title', name: 'title', widget: 'string' }
-      - { label: 'order', name: 'Image/Video Order',  widget: "string"}
-      - { label: 'Image/Video Description for SEO', name: 'SEO', widget: 'string' }
+      - { label: 'order', name: 'Image/Video Order',  widget: "string" , required: false }
+      - { label: 'Image/Video Description for SEO', name: 'SEO', widget: 'string' , required: false}
       - { label: 'Image ', name: 'image', widget: 'image' }
-      - { label: 'Video File', name: 'video', widget: 'file' }
+      - { label: 'Video File', name: 'video', widget: 'file' , required: false}
       - { label: 'tags', name: 'tag',  widget: "relation",
         collection: "navigation" ,
         searchFields: ["title"],
