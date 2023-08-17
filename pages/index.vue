@@ -2,14 +2,13 @@
     <div>
         <div class="masonry ">
 
+            <!-- {{  }} -->
             <div class="brick  animate__animated animate__fadeInUp " :key="index + 'images_item'"
                 v-for="(row, index) in work">
                 <div class="image-mason ">
 
                     <figure class="image has-background-black">
-                        <img :src="row.image" alt="">
-                        <!-- <nuxt-picture provider="cloudinary" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400"
-                            placeholder quality="80" loading="lazy" :src="row.image" /> -->
+                        <img :src="cldImage(row.image)" alt="">
                     </figure>
                     <div class=" mt-1 mb-4">
                     </div>
@@ -76,7 +75,7 @@
                 <div class="columns is-centered is-variable is-8 is-multiline">
                     <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
                         <figure class="image is-1by1  ">
-                            <nuxt-picture :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                            <nuxt-picture provider='static' :alt="'Photography for ' + row.name + ' by Shine Bhola'"
                                 sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
                                 loading="lazy" :src="row.image" />
                         </figure>
@@ -136,7 +135,7 @@
                     <div class="columns is-mobile is-centered is-variable is-8 is-multiline">
                         <div class="column  is-4-touch " v-for="(row, index) in clients_list" :key="index + '_client'">
                             <figure class="image is-1by1  ">
-                                <nuxt-picture :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                                <nuxt-picture provider='static' :alt="'Photography for ' + row.name + ' by Shine Bhola'"
                                     sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
                                     loading="lazy" :src="row.image" />
                             </figure>
@@ -154,9 +153,16 @@
     </div>
 </template>
 <script setup>
-const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).find())
 
-const { data: clients } = await useAsyncData('clients', () => queryContent('/clients').only(['image', 'client_name']).find())
+function cldImage(link){
+    
+    const x = link.split('/upload')
+    const z = x[0]+'/upload/f_webp,q_80,w_600,dpr_auto/'
+    const final = z+x[1]
+    return final
+}
+
+const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).find())
 
 const clients_list = [
     {

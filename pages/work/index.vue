@@ -49,8 +49,8 @@
           <div class="image-mason ">
 
             <figure class="image  has-background-dark">
-              <nuxt-picture provider="netlify" sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder
-                quality="80" loading="lazy" :src="row.image" />
+              <img :src="cldImage(row.image)" alt="">
+
             </figure>
             <div class=" mt-1 mb-4">
             </div>

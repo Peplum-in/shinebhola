@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   
   image: {
+    dir: 'assets/logo',
     netlify: {
       baseURL: 'https://shinebhola.netlify.app'
     },

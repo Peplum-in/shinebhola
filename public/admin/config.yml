@@ -29,10 +29,11 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Image Title', name: 'title', widget: 'string' }
-      - { label: 'order', name: 'Image Order',  widget: "string"}
-      - { label: 'Image Description for SEO', name: 'SEO', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Image/Video Title', name: 'title', widget: 'string' }
+      - { label: 'order', name: 'Image/Video Order',  widget: "string"}
+      - { label: 'Image/Video Description for SEO', name: 'SEO', widget: 'string' }
+      - { label: 'Image ', name: 'image', widget: 'image' }
+      - { label: 'Video File', name: 'video', widget: 'file' }
       - { label: 'tags', name: 'tag',  widget: "relation",
         collection: "navigation" ,
         searchFields: ["title"],
