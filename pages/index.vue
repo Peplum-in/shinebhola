@@ -75,7 +75,7 @@
                 <div class="columns is-centered is-variable is-8 is-multiline">
                     <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
                         <figure class="image is-1by1  ">
-                            <nuxt-picture provider='static' :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                            <nuxt-picture  :alt="'Photography for ' + row.name + ' by Shine Bhola'"
                                 sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
                                 loading="lazy" :src="row.image" />
                         </figure>
@@ -135,7 +135,7 @@
                     <div class="columns is-mobile is-centered is-variable is-8 is-multiline">
                         <div class="column  is-4-touch " v-for="(row, index) in clients_list" :key="index + '_client'">
                             <figure class="image is-1by1  ">
-                                <nuxt-picture provider='static' :alt="'Photography for ' + row.name + ' by Shine Bhola'"
+                                <nuxt-picture  :alt="'Photography for ' + row.name + ' by Shine Bhola'"
                                     sizes="sm:100vw md:50vw lg:600px" format="webp" width="400" placeholder quality="80"
                                     loading="lazy" :src="row.image" />
                             </figure>
@@ -167,35 +167,35 @@ const { data: work } = await useAsyncData('work', () => queryContent('/work').on
 const clients_list = [
     {
         'name': 'BBC',
-        'image': '/assets/logo/resized/bbc.png',
+        'image': '/resized/bbc.png',
     },
     {
         'name': 'Conde Nast',
-        'image': '/assets/logo/resized/condenast.png',
+        'image': '/resized/condenast.png',
     },
     {
         'name': 'Good Earth',
-        'image': '/assets/logo/resized/goodearth.png',
+        'image': '/resized/goodearth.png',
     },
     {
         'name': 'Enrico',
-        'image': '/assets/logo/resized/enrico.png',
+        'image': '/resized/enrico.png',
     },
     {
         'name': 'Mitsubishi Electric',
-        'image': '/assets/logo/resized/mitsubishi.png',
+        'image': '/resized/mitsubishi.png',
     },
     {
         'name': 'Opame',
-        'image': '/assets/logo/resized/opame.png',
+        'image': '/resized/opame.png',
     },
     {
         'name': 'Nila House',
-        'image': '/assets/logo/resized/nilahouse.png',
+        'image': '/resized/nilahouse.png',
     },
     {
         'name': 'Whirlpool',
-        'image': '/assets/logo/resized/whirlpool.png',
+        'image': '/resized/whirlpool.png',
     },
 ]
 </script>

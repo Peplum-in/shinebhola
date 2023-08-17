@@ -73,7 +73,7 @@
               <nuxt-link to="/">
 
                 <figure class="image " style="width:200px">
-                  <nuxt-picture provider='static' width="200" loading="lazy" format="webp" placeholder src="/assets/logo/shinebhola_logo_white.png"></nuxt-picture>
+                  <nuxt-picture  width="200" loading="lazy" format="webp" placeholder src="/shinebhola_logo_white.png"></nuxt-picture>
                 </figure>
               </nuxt-link>
 
@@ -111,7 +111,7 @@
               <nuxt-link to="/">
 
                 <figure class="image " style="width:500px">
-                  <nuxt-picture provider='static' width="500" loading="lazy" format="webp" placeholder src="/assets/logo/shinebhola_logo_white.png"></nuxt-picture>
+                  <nuxt-picture  width="500" loading="lazy" format="webp" placeholder src="/shinebhola_logo_white.png"></nuxt-picture>
                 </figure>
               </nuxt-link>
               <!-- <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link> -->
