@@ -27,7 +27,7 @@
     <div class="level px-0 is-mobile is-hidden-touch">
       <div class="level-left">
 
-        <div class="level-item" >
+        <div class="level-item">
           <nuxt-link to="/work/" class=" has-hover has-text-white is-capitalized ">
 
             All
@@ -45,13 +45,26 @@
     <section class="">
       <div class="masonry ">
 
-        <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'" v-for="(row, index) in posts">
+        <div class="brick animate__animated animate__fadeInUp " :key="index + 'images_item'"
+          v-for="(row, index) in posts">
           <div class="image-mason ">
+            <div v-if="Object.keys(row).includes('video')">
+              <figure class="image is-16by9 has-background-black">
 
-            <figure class="image  has-background-dark">
-              <img :src="cldImage(row.image)" alt="">
+                <video class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
+                  :poster="cldImage(row.image)" :alt="row.description">
+                  <source :src="cldVideoRe(row.video)" type="video/webm" />
+                  <source :src="cldVideoBase(row.video)" type="video/webm" />
+                </video>
+              </figure>
 
-            </figure>
+            </div>
+            <div v-else>
+
+              <figure class="image has-background-black">
+                <img :src="cldImage(row.image)" :alt="row.description">
+              </figure>
+            </div>
             <div class=" mt-1 mb-4">
             </div>
           </div>
@@ -75,6 +88,28 @@ const showFilterMobileNav = reactive({
 function showFilter() {
   showFilterMobileNav.isOpen = !showFilterMobileNav.isOpen
 };
+
+function cldImage(link) {
+
+const x = link.split('/upload')
+const z = x[0] + '/upload/f_webp,q_80,w_600,dpr_auto/'
+const final = z + x[1]
+return final
+}
+function cldVideoRe(link) {
+
+const x = link.split('/upload')
+const z = x[0] + '/upload/f_webm,w_600,ac_none/'
+const final = z + x[1]
+return final
+}
+function cldVideoBase(link) {
+
+const x = link.split('/upload')
+const z = x[0] + '/upload/f_mp4,w_600,ac_none/'
+const final = z + x[1]
+return final
+}
 
 const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 

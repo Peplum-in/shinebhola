@@ -1,15 +1,26 @@
 <template>
     <div>
         <div class="masonry ">
-
-            <!-- {{  }} -->
             <div class="brick  animate__animated animate__fadeInUp " :key="index + 'images_item'"
                 v-for="(row, index) in work">
                 <div class="image-mason ">
+                    <div v-if="Object.keys(row).includes('video')">
+                        <figure class="image is-16by9 has-background-black">
 
-                    <figure class="image has-background-black">
-                        <img :src="cldImage(row.image)" alt="">
-                    </figure>
+                            <video  class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
+                                :poster="cldImage(row.image)" :alt="row.description">
+                                <source :src="cldVideoRe(row.video)" type="video/webm" />
+                                <source :src="cldVideoBase(row.video)" type="video/webm" />
+                            </video>
+                        </figure>
+
+                    </div>
+                    <div v-else>
+
+                        <figure class="image has-background-black">
+                            <img :src="cldImage(row.image)" :alt="row.description">
+                        </figure>
+                    </div>
                     <div class=" mt-1 mb-4">
                     </div>
                 </div>
@@ -77,7 +88,7 @@
                         <figure class="image is-1by1  ">
                             <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
 
-                          
+
                         </figure>
                     </div>
                 </div>
@@ -159,8 +170,22 @@ function cldImage(link) {
     const final = z + x[1]
     return final
 }
+function cldVideoRe(link) {
 
-const { data: work } = await useAsyncData('work', () => queryContent('/work').only(['image', 'caption']).find())
+    const x = link.split('/upload')
+    const z = x[0] + '/upload/f_webm,w_600,ac_none/'
+    const final = z + x[1]
+    return final
+}
+function cldVideoBase(link) {
+
+    const x = link.split('/upload')
+    const z = x[0] + '/upload/f_mp4,w_600,ac_none/'
+    const final = z + x[1]
+    return final
+}
+
+const { data: work } = await useAsyncData('work', () => queryContent('/work').find())
 
 const clients_list = [
     {
