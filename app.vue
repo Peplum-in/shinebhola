@@ -74,7 +74,7 @@
 
                 <figure class="image " style="width:200px">
                   <img
-                    src="https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_200/v1692279273/shinebhola_logo_white_hetovd.png" />
+                    src="https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_400,q_100/v1692279273/shinebhola_logo_white_hetovd.png" />
                 </figure>
               </nuxt-link>
 
@@ -113,7 +113,7 @@
 
                 <figure class="image " style="width:500px">
                   <img
-                    src="https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_500/v1692279273/shinebhola_logo_white_hetovd.png" />
+                    src="https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_800,q_100/v1692279273/shinebhola_logo_white_hetovd.png" />
 
                 </figure>
               </nuxt-link>
