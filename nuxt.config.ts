@@ -1,15 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  target: 'static' ,
+  target: 'static',
   modules: [
     '@nuxt/content',
     '@nuxt/image',
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    head: {
+      charset: 'utf-8',
+      title: 'Shine Bhola',
+      viewport: 'width=device-width, initial-scale=1',
+    }
   },
-  
+  css: ['animate.css/animate.min.css'],
+
   image: {
     dir: 'assets/logo',
     netlify: {
@@ -27,15 +32,15 @@ export default defineNuxtConfig({
       '2xl': 1536
     },
   },
-  content:{
-    markdown:{
-      toc:{
-        depth:3,
-        searchDept:3,
+  content: {
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDept: 3,
       }
     },
-    highlight:{
-      theme:"dracula-soft"
+    highlight: {
+      theme: "dracula-soft"
     }
   }
 })

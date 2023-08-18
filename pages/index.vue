@@ -7,7 +7,7 @@
                     <div v-if="Object.keys(row).includes('video')">
                         <figure class="image is-16by9 has-background-black">
 
-                            <video  class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
+                            <video class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
                                 :poster="cldImage(row.image)" :alt="row.description">
                                 <source :src="cldVideoRe(row.video)" type="video/webm" />
                                 <source :src="cldVideoBase(row.video)" type="video/webm" />
@@ -38,7 +38,7 @@
                 <div class="column is-6">
                     <p class="heading">
                         ABOUT US</p>
-                    <p class="is-size-6">
+                    <p class="is-size-5-desktop">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
 
@@ -58,15 +58,17 @@
 
                     <ul>
 
+                        <li><a href="mailto:info@shinebhola.com"
+                                class="is-size-5-desktop is-is-size-6-touch is-size-6 has-text-white">info@shinebhola.com</a>
+                        </li>
+                        <li><a href="tel:919414227723"
+                                class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a>
+                        </li>
+                        <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
+                            <a href="https://instagram.com/shine_bhola"
+                                class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
+                        </li>
 
-                        <li><a href="mailto:info@shinebhola.com" class=" is-size-6 has-text-white">info@shinebhola.com</a>
-                        </li>
-                        <li><a href="tel:917073077042" class="is-size-6  has-text-white">+91-7073077042</a></li>
-                        <li class="">Facebook-<a href="" class="is-size-6 has-text-white  is-underlined">@shinebhola</a>
-                        </li>
-                        <li class="">Instagram-
-                            <a href="" class="is-size-6 has-text-white  is-underlined">@shinebhola</a>
-                        </li>
                     </ul>
 
 
@@ -123,15 +125,15 @@
 
                     <ul>
 
-
-                        <li><a href="mailto:info@shinebhola.com" class=" is-size-6 has-text-white">info@shinebhola.com</a>
-                        </li>
-                        <li><a href="tel:917073077042" class="is-size-6  has-text-white">+91-7073077042</a></li>
-                        <li class="">Facebook-<a href="" class="is-size-6 has-text-white  is-underlined">@shinebhola</a>
-                        </li>
-                        <li class="">Instagram-
-                            <a href="" class="is-size-6 has-text-white  is-underlined">@shinebhola</a>
-                        </li>
+                        <li><a href="mailto:info@shinebhola.com"
+                            class="is-size-5-desktop is-is-size-6-touch is-size-6 has-text-white">info@shinebhola.com</a>
+                    </li>
+                    <li><a href="tel:919414227723"
+                            class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a></li>
+                    <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
+                        <a href="https://instagram.com/shine_bhola"
+                            class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
+                    </li>
                     </ul>
 
 

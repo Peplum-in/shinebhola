@@ -1,15 +1,17 @@
 <template>
     <div>
 
-        <div >
-    
+        <div>
+
             <div class="section py-0 mb-4 is-hidden-desktop has-text-white  is-rounded ">
                 <div class="level is-mobile ">
-                    <nuxt-link to="/work" class="level-left button-shine-light">
-                        All
+                    <nuxt-link to="/work" class="level-left has-text-white">
+                        <figure class="image container is-16x16 mr-2">
+                                <img src="/assets/icons/arrow-back.svg" alt="">
+                            </figure>  All
                     </nuxt-link>
                     <div class="level-right has-text-light">
-    
+
                         {{ text_string }}
                     </div>
                 </div>
@@ -17,36 +19,38 @@
             <div class=" py-0 mb-4 is-hidden-touch has-text-white  is-rounded ">
                 <div class="level is-mobile ">
                     <div class="level-left has-text-light">
-                        <nuxt-link to="/work" class="level-item">
-                            ← All
+                        <nuxt-link to="/work" class="level-item has-text-white">
+                            <figure class="image container is-16x16 mr-2">
+                                <img src="/assets/icons/arrow-back.svg" alt="">
+                            </figure> All
                         </nuxt-link>
                         <div class="level-item ml-3">
-    
+
                             {{ text_string }}
                         </div>
                     </div>
-    
+
                 </div>
             </div>
-    
+
             <div class="masonry ">
-    
+
                 <div class="brick animate__animated animate__fadeInUp" :key="index + 'images_item'"
                     v-for="(row, index) in work">
                     <div class="image-mason ">
                         <div v-if="Object.keys(row).includes('video')">
                             <figure class="image is-16by9 has-background-black">
-    
+
                                 <video class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
                                     :poster="cldImage(row.image)" :alt="row.description">
                                     <source :src="cldVideoRe(row.video)" type="video/webm" />
                                     <source :src="cldVideoBase(row.video)" type="video/webm" />
                                 </video>
                             </figure>
-    
+
                         </div>
                         <div v-else>
-    
+
                             <figure class="image has-background-black">
                                 <img :src="cldImage(row.image)" :alt="row.description">
                             </figure>
@@ -56,7 +60,7 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
 </template>

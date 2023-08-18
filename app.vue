@@ -1,9 +1,5 @@
 <template>
   <div>
-    <!-- <div v-if="loading" class="fixed left-0 top-0 h-0.5 w-full z-50 bg-green-500" /> -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <div class="hero  blur-overlay  is-hidden-desktop  is-fullheight-with-navbar has-background-transparent"
       v-if="showMobileNav.isOpen"
       :class="{ 'animate__animated animate__fadeIn': showMobileNav.isOpen, 'animate__animated animate__fadeOut': !showMobileNav.isOpen }">
@@ -26,6 +22,13 @@
                 <span v-if="showSubMobileNav.isOpen" class="ml-2">−</span>
               </li>
               <div class="" v-if="showSubMobileNav.isOpen">
+                <li class="py-3">
+
+                  <nuxt-link @click="() => { showMobileNav.isOpen = false }" to="/work"
+                    class="pl-6 is-capitalized has-text-white  has-text-left  is-size-6 pr-3">
+                    All
+                  </nuxt-link>
+                </li>
                 <li class="py-3" v-for="(nav, index) in navigation" :key="index">
 
                   <nuxt-link @click="() => { showMobileNav.isOpen = false }" :to="'/work/' + nav.link_text"
@@ -66,7 +69,7 @@
 
     </div>
     <div class=" py-4 sticky-menu section container is-hidden-desktop">
-      <div class="level mt-4 pb-0  container is-mobile sticky-menu-inner">
+      <div class="level animate_animated animate_fadeIn mt-4 pb-0  container is-mobile sticky-menu-inner">
         <div class="level-left">
           <div class="level-item">
             <div>
@@ -106,7 +109,7 @@
       <div class=" is-hidden-touch ">
 
         <div class="section container pt-0 px-0">
-          <div class="level my-0">
+          <div class="level animate_animated animate_fadeIn my-0">
 
             <div class="level-left">
               <nuxt-link to="/">
@@ -117,10 +120,7 @@
 
                 </figure>
               </nuxt-link>
-              <!-- <nuxt-link to="/" class="brandtype has-text-white ">SHINE BHOLA</nuxt-link> -->
             </div>
-            <!-- <div class="level-item">
-            </div> -->
             <div class="level-right">
               <nuxt-link to="/about" :class="{ 'main-item-active': route.path == '/about' }"
                 class="level-item main-item has-text-white mr-5 ">About</nuxt-link>
@@ -138,7 +138,7 @@
       </div>
       <div class="">
         <section class=" container ">
-          <NuxtLoadingIndicator />
+          <NuxtLoadingIndicator color="white" />
           <NuxtPage class="" />
         </section>
         <footer class="section container has-background-transparent is-hidden-touch mt-6 px-0 pb-0 footer">
@@ -146,7 +146,25 @@
           <div class="level is-mobile">
             <div class="level-left">
               <div class="level-item">
-                <div class="has-text-grey is-size-7-touch ">
+                <div class="has-text-grey ">
+                  <div class=" mb-2 ">
+                    <a class="is-inline-block mr-4" href="https://instagram.com/shine_bhola">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/instagram.svg" alt="">
+                      </figure>
+                    </a>
+                    <a class="is-inline-block mr-4" href="mailto:info@shinebhola.com">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/email.svg" alt="">
+                      </figure>
+                    </a>
+                    <a class="is-inline-block" href="tel:919414227723">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/call.svg" alt="">
+                      </figure>
+                    </a>
+
+                  </div>
                   ©️2023 Shine Bhola. All Rights Reserved.
                 </div>
               </div>
@@ -159,17 +177,38 @@
           <div class="level is-mobile">
             <div class="level-left">
               <div class="level-item">
-                <div class="has-text-grey is-size-7-touch ">
+                <div class="has-text-grey  ">
+                  <div class=" mb-2 ">
+                    <a class="is-inline-block mr-2" href="https://instagram.com/shine_bhola">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/instagram.svg" alt="">
+                      </figure>
+                    </a>
+                    <a class="is-inline-block mr-2" href="mailto:info@shinebhola.com">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/email.svg" alt="">
+                      </figure>
+                    </a>
+                    <a class="is-inline-block" href="tel:919414227723">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/call.svg" alt="">
+                      </figure>
+                    </a>
+
+                  </div>
                   ©️2023 Shine Bhola. All Rights Reserved.
                 </div>
               </div>
             </div>
 
+
           </div>
         </footer>
         <div @click="scrollToTop" class="scroller is-clickable">
           <button class="scrollToTop">
-            Up
+            <figure class="image container is-24x24">
+              <img src="/assets/icons/arrow-up.svg" alt="">
+            </figure>
           </button>
         </div>
       </div>
@@ -576,7 +615,6 @@ a#menu-icon.close .bar:last-child {
 } */
 
 .scrollToTop {
-
   background-color: #fff;
   border: none;
   border-radius: 50%;
@@ -585,22 +623,17 @@ a#menu-icon.close .bar:last-child {
   font-size: 16px;
   line-height: 48px;
   width: 48px;
-
+  height: 48px;
   position: fixed;
   bottom: 30px;
   right: 30px;
 
   z-index: 5;
-
-  /* hide with opacity */
-  /* opacity: 0; */
-
-  /* also add a translate effect */
-  /* transform: translateY(100px); */
-
-  /* and a transition */
   transition: all .5s ease;
+}
 
+.scrollToTop:hover {
+  transform: translateY(3px);
 }
 
 .showBtn {
@@ -615,7 +648,7 @@ a#menu-icon.close .bar:last-child {
   z-index: 10;
   /* backdrop-filter: blur(2px); */
   backdrop-filter: blur(2px);
-  mask: linear-gradient(0deg, transparent, black 30%);
+  mask: linear-gradient(0deg, transparent, white 0%);
   /* backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%); */
 }
@@ -636,4 +669,5 @@ a#menu-icon.close .bar:last-child {
 .menu-box-open {
   max-height: 100% !important;
   transition: all 0.2s ease-out;
-}</style>
+}
+</style>
