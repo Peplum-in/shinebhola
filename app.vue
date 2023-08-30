@@ -114,7 +114,7 @@
             <div class="level-left">
               <nuxt-link to="/">
 
-                <figure class="image " style="width:500px">
+                <figure class="image " style="width:300px">
                   <img
                     src="https://res.cloudinary.com/dhzucwklz/image/upload/f_webp,w_800,q_100/v1692279273/shinebhola_logo_white_hetovd.png" />
 

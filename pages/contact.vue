@@ -5,17 +5,11 @@
             <div class="has-text-white">
                 <p class="heading">CONTACT</p>
                 <ul class="">
-
-
                     <li><a href="mailto:info@shinebhola.com"
                             class="is-size-5-desktop is-is-size-6-touch is-size-6 has-text-white">info@shinebhola.com</a>
                     </li>
                     <li><a href="tel:919414227723"
-                            class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a></li>
-                    <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
-                        <a href="https://instagram.com/shine_bhola"
-                            class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
-                    </li>
+                            class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a></li>                 
                 </ul>
 
 
@@ -63,10 +57,7 @@
                     </li>
                     <li><a href="tel:919414227723"
                             class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a></li>
-                    <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
-                        <a href="https://instagram.com/shine_bhola"
-                            class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
-                    </li>
+                  
 
                 </ul>
 

@@ -6,7 +6,7 @@
                     <figure class="animate__animated animate__fadeInUp is-hidden-desktop image is-4by5 mb-6">
                         <img  src="/img/shineshine.jpg" class="has-background-dark" alt="" />
                     </figure>
-                    <p class="heading">
+                    <p class="heading mt-4">
                             ABOUT US</p>
                     <p class=" has-text-white is-size-5-desktop is-size-6-touch">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
@@ -15,7 +15,7 @@
                         <br>
                         In 2011, he established Shine Bhola Studios in Jaipur and is living his passion since then.
                     </p>
-                    <div class="py-6">
+                    <div class="mt-5">
 
                         <p class="heading">
                             OUR BELIEF</p>
@@ -57,12 +57,12 @@
 
 
         </section>
+        <figure class="animate__animated animate__fadeIn is-hidden-desktop image is-4by5 mb-6">
+            <img  src="/img/shineshine.jpg" class="has-background-dark" alt="" />
+        </figure>
         <section class="is-hidden-desktop section py-0">
             <div class="columns">
                 <div class="animate__animated animate__fadeIn column has-text-white is-5-desktop ">
-                    <figure class="is-hidden-desktop image is-4by5 mb-6">
-                        <img  src="/img/shineshine.jpg" class="has-background-dark" alt="" />
-                    </figure>
                     <p class="heading">
                             ABOUT US</p>
                     <p class="has-text-white is-size-5-desktop is-size-6-touch">
@@ -72,9 +72,9 @@
                         <br>
                         In 2011, he established Shine Bhola Studios in Jaipur and is living his passion since then.
                     </p>
-                    <div class="py-6">
+                    <div class="">
 
-                        <p class="heading">
+                        <p class="heading  mt-5">
                             OUR BELIEF</p>
                         <p class="is-size-5-desktop is-size-6-touch">
                             The best way to describe his approach: ‘My true passion for photography is in its power to

@@ -59,6 +59,16 @@ collections:
     fields:
       - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'Link Text', name: 'link_text', widget: 'string' }
+  - name: 'about'
+    label: 'About'
+    folder: 'content/about'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'content', name: 'content', widget: 'markdown' }
   - name: 'clients'
     label: 'Clients'
     folder: 'content/clients'
@@ -69,4 +79,4 @@ collections:
       preview: false
     fields:
       - { label: 'client name', name: 'client', widget: 'string' }
-      - { label: 'Image ( uplaod in 1by1 ratio)', name: 'image', widget: 'image' }
+      - { label: 'Image ( uplaod in 1by1 ratio 512x512px)', name: 'image', widget: 'image' }

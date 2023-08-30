@@ -44,7 +44,7 @@
                                 <video class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
                                     :poster="cldImage(row.image)" :alt="row.description">
                                     <source :src="cldVideoRe(row.video)" type="video/webm" />
-                                    <source :src="cldVideoBase(row.video)" type="video/webm" />
+                                    <source :src="cldVideoBase(row.video)" type="video/mp4" />
                                 </video>
                             </figure>
 

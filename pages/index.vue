@@ -10,7 +10,7 @@
                             <video class="has-ratio" autoplay disablepictureinpicture loop muted playsinline
                                 :poster="cldImage(row.image)" :alt="row.description">
                                 <source :src="cldVideoRe(row.video)" type="video/webm" />
-                                <source :src="cldVideoBase(row.video)" type="video/webm" />
+                                <source :src="cldVideoBase(row.video)" type="video/mp4" />
                             </video>
                         </figure>
 
@@ -35,7 +35,7 @@
 
 
             <div class="columns has-text-white  mb-6 is-variable is-8 is-multiline">
-                <div class="column is-6">
+                <div class="column is-12">
                     <p class="heading">
                         ABOUT US</p>
                     <p class="is-size-5-desktop">
@@ -48,34 +48,7 @@
 
                 </div>
 
-                <div class="column is-4 is-offset-2-desktop">
-
-
-
-                    <p class="heading">
-                        INFO</p>
-                    <p class=" ">
-
-                    <ul>
-
-                        <li><a href="mailto:info@shinebhola.com"
-                                class="is-size-5-desktop is-is-size-6-touch is-size-6 has-text-white">info@shinebhola.com</a>
-                        </li>
-                        <li><a href="tel:919414227723"
-                                class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a>
-                        </li>
-                        <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
-                            <a href="https://instagram.com/shine_bhola"
-                                class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
-                        </li>
-
-                    </ul>
-
-
-                    </p>
-
-
-                </div>
+              
 
 
             </div>
@@ -85,7 +58,7 @@
                     CLIENTS</p>
 
 
-                <div class="columns is-centered is-variable is-8 is-multiline">
+                <div class="columns is-variable is-8 is-multiline">
                     <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
                         <figure class="image is-1by1  ">
                             <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
@@ -117,35 +90,9 @@
 
                 <div class="mt-6">
 
-
-
-                    <p class="heading">
-                        INFO</p>
-                    <p class=" ">
-
-                    <ul>
-
-                        <li><a href="mailto:info@shinebhola.com"
-                            class="is-size-5-desktop is-is-size-6-touch is-size-6 has-text-white">info@shinebhola.com</a>
-                    </li>
-                    <li><a href="tel:919414227723"
-                            class="is-size-6  is-size-5-desktop is-is-size-6-touch has-text-white">+91-9414227723</a></li>
-                    <li class="is-size-5-desktop is-is-size-6-touch">Instagram-
-                        <a href="https://instagram.com/shine_bhola"
-                            class="is-size-6 has-text-white is-size-5-desktop is-is-size-6-touch  is-underlined">@shinebhola</a>
-                    </li>
-                    </ul>
-
-
-                    </p>
-
-
-                </div>
-                <div class="mt-6">
-
                     <p class="heading">
                         CLIENTS</p>
-                    <div class="columns is-mobile is-centered is-variable is-8 is-multiline">
+                    <div class="columns is-mobile is-variable is-8 is-multiline">
                         <div class="column  is-4-touch " v-for="(row, index) in clients_list" :key="index + '_client'">
                             <figure class="image is-1by1  ">
                                 <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
