@@ -107,5 +107,6 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: 'order', name: 'Client Order',  widget: "string" , required: false }
       - { label: 'client name', name: 'client', widget: 'string' }
       - { label: 'Image ( uplaod in 1by1 ratio 512x512px)', name: 'image', widget: 'image' }
