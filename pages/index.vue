@@ -88,7 +88,7 @@
 
                 </div>
 
-                <div class="mt-6">
+                <div class="section px-1 mt-6">
 
                     <p class="heading">
                         CLIENTS</p>

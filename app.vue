@@ -206,7 +206,7 @@
         </footer>
         <div @click="scrollToTop" class="scroller is-clickable">
           <button class="scrollToTop">
-            <figure class="image container is-24x24">
+            <figure class="image is-24x24 container">
               <img src="/assets/icons/arrow-up.svg" alt="">
             </figure>
           </button>
