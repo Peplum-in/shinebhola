@@ -93,7 +93,7 @@ collections:
     folder: 'content/about'
     format: 'frontmatter'
     create: true
-    slug: '{{slug}}'
+    slug: 'about'
     editor:
       preview: true
     fields:
