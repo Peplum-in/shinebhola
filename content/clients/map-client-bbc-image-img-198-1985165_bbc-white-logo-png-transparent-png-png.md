@@ -1,4 +1,4 @@
 ---
 client: BBC
-image: /img/198-1985165_bbc-white-logo-png-transparent-png.png
+image: https://res.cloudinary.com/dhzucwklz/image/upload/v1693475442/bbc_bwfn3b.png
 ---
