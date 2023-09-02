@@ -127,6 +127,6 @@ figure.is-rounded {
 }
 
 .has-background-secondary {
-    background-color: #0c0c0c000;
+    background-color: #0c0c0c00;
 }
 </style>

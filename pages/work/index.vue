@@ -26,13 +26,6 @@
     </div>
     <div class="level px-0 is-mobile is-hidden-touch">
       <div class="level-left">
-
-        <div class="level-item">
-          <nuxt-link to="/work/" class=" has-hover has-text-white is-capitalized ">
-
-            All
-          </nuxt-link>
-        </div>
         <div class="level-item" v-for="(nav, index) in navigation" :key="index">
           <nuxt-link :to="'/work/' + nav.link_text" class=" has-hover has-text-white is-capitalized "
             :class="{ 'tag is-outlined is-dark   is-rounded': route.params.work == nav.link_text }">
@@ -113,7 +106,7 @@ return final
 
 const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
 
-const { data: posts } = await useAsyncData('work', () => queryContent('/work').find())
+const { data: posts } = await useAsyncData('workpage', () => queryContent('/workpage').find())
 
 
 </script>

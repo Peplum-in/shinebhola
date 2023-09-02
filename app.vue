@@ -68,7 +68,7 @@
       </div>
 
     </div>
-    <div class=" py-4 sticky-menu section container is-hidden-desktop">
+    <div class=" pb-4 pt-2 sticky-menu section container is-hidden-desktop">
       <div class="level animate_animated animate_fadeIn mt-4 pb-0  container is-mobile sticky-menu-inner">
         <div class="level-left">
           <div class="level-item">
@@ -647,8 +647,13 @@ a#menu-icon.close .bar:last-child {
   top: 0px;
   z-index: 10;
   /* backdrop-filter: blur(2px); */
-  backdrop-filter: blur(2px);
-  mask: linear-gradient(0deg, transparent, white 0%);
+  /* backdrop-filter: blur(2px); */
+  /* background: layer; */
+  background-image: linear-gradient(rgba(12, 12, 12, 0.8), transparent);
+
+  /* mask-image: linear-gradient(transparent,black); */
+
+  /* mask: linear-gradient(0deg, transparent, white 0%); */
   /* backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%); */
 }

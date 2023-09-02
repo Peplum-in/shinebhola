@@ -5,29 +5,36 @@
 
             <div class="section py-0 mb-4 is-hidden-desktop has-text-white  is-rounded ">
                 <div class="level is-mobile ">
-                    <nuxt-link to="/work" class="level-left has-text-white">
+                    <!-- <nuxt-link to="/work" class="level-left has-text-white">
                         <figure class="image container is-16x16 mr-2">
-                                <img src="/assets/icons/arrow-back.svg" alt="">
-                            </figure>  All
-                    </nuxt-link>
-                    <div class="level-right has-text-light">
+                            <img src="/assets/icons/arrow-back.svg" alt="">
+                        </figure> All
+                    </nuxt-link> -->
+                    <div class="level-left has-text-light">
 
                         {{ text_string }}
                     </div>
+
                 </div>
             </div>
-            <div class=" py-0 mb-4 is-hidden-touch has-text-white  is-rounded ">
+            <div class=" py-0 mb-4 animate_animated animate_fadeIn is-hidden-touch has-text-white  is-rounded ">
                 <div class="level is-mobile ">
-                    <div class="level-left has-text-light">
-                        <nuxt-link to="/work" class="level-item has-text-white">
+                    <div class="level-left ">
+                        <!-- <nuxt-link to="/work" class="level-item has-text-white ">
                             <figure class="image container is-16x16 mr-2">
-                                <img src="/assets/icons/arrow-back.svg" alt="">
+                                <img src="/assets/icons/arrow-back.svg" style="" class="" alt="">
                             </figure> All
-                        </nuxt-link>
-                        <div class="level-item ml-3">
+                        </nuxt-link> -->
+                        <div class="level-item  ">
 
                             {{ text_string }}
                         </div>
+                        <nuxt-link  v-for="(nav, index) in navigation" :key="index"
+                            :to="'/work/' + nav.link_text" class="level-item has-hover has-text-grey is-capitalized "
+                            :class="{ 'is-hidden': route.params.work == nav.link_text }">
+
+                            {{ nav.link_text }}
+                        </nuxt-link>
                     </div>
 
                 </div>
@@ -71,6 +78,8 @@ function getCapitalizedText(text) {
 }
 const photo_string = getCapitalizedText(route.params.work);
 const text_string = getCapitalizedText(route.params.work);
+const { data: navigation } = await useAsyncData('navigation', () => queryContent('/nav').only(['title', 'link_text']).find());
+
 const { data: work } = await useAsyncData('work', () => queryContent('/work').where({ 'tag': route.params.work }).find())
 // const { data: page } = await useAsyncData('nav', () => queryContent('/nav').where({ 'title': photo_string }).find())
 function cldImage(link) {

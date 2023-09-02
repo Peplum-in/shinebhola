@@ -39,7 +39,7 @@
                     <p class="heading">
                         ABOUT US</p>
                     <p class="is-size-5-desktop">
-                        Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
+                        Meet Shine Bhola, an architect, an academician and a photographer. <br> Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
 
                         <br>
@@ -54,7 +54,7 @@
             </div>
             <div class="mt-6 has-text-white">
 
-                <p class="heading has-text-centered">
+                <p class="heading has-text-left">
                     CLIENTS</p>
 
 
