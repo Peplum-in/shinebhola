@@ -97,7 +97,7 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'content', name: 'content', widget: 'markdown' }
+      - { label: 'content', name: 'content', widget: 'text' }
   - name: 'clients'
     label: 'Clients'
     folder: 'content/clients'
