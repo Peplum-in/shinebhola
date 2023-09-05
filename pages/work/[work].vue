@@ -5,11 +5,7 @@
 
             <div class="section py-0 mb-4 is-hidden-desktop has-text-white  is-rounded ">
                 <div class="level is-mobile ">
-                    <!-- <nuxt-link to="/work" class="level-left has-text-white">
-                        <figure class="image container is-16x16 mr-2">
-                            <img src="/assets/icons/arrow-back.svg" alt="">
-                        </figure> All
-                    </nuxt-link> -->
+
                     <div class="level-left has-text-light">
 
                         {{ text_string }}
@@ -20,17 +16,13 @@
             <div class=" py-0 mb-4 animate_animated animate_fadeIn is-hidden-touch has-text-white  is-rounded ">
                 <div class="level is-mobile ">
                     <div class="level-left ">
-                        <!-- <nuxt-link to="/work" class="level-item has-text-white ">
-                            <figure class="image container is-16x16 mr-2">
-                                <img src="/assets/icons/arrow-back.svg" style="" class="" alt="">
-                            </figure> All
-                        </nuxt-link> -->
+
                         <div class="level-item  ">
 
                             {{ text_string }}
                         </div>
-                        <nuxt-link  v-for="(nav, index) in navigation" :key="index"
-                            :to="'/work/' + nav.link_text" class="level-item has-hover has-text-grey is-capitalized "
+                        <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="'/work/' + nav.link_text"
+                            class="level-item has-hover is-capitalized "
                             :class="{ 'is-hidden': route.params.work == nav.link_text }">
 
                             {{ nav.link_text }}
@@ -104,3 +96,15 @@ function cldVideoBase(link) {
     return final
 }
 </script>
+
+
+<style>
+a.has-hover {
+    transition: 0.2s all ease-in;
+    color: #666666!important
+}
+
+a.has-hover:hover {
+    color: lightgrey !important
+}
+</style>

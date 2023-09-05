@@ -50,7 +50,7 @@
                 <a @click="() => { showMobileNav.isOpen = false }" href="https://whitegraphite.co.uk"
                   class="py-3 pt-3 has-text-white  is-size-6">
 
-                  Studio ↗
+                  Studio
                 </a>
               </li>
               <li class="mt-3">
@@ -108,8 +108,8 @@
       <!-- Type 2 -->
       <div class=" is-hidden-touch ">
 
-        <div class="section container pt-0 px-0">
-          <div class="level animate_animated animate_fadeIn my-0">
+        <div class="section sticky-menu-main container  py-5  px-0">
+          <div class="level  pt-1 animate_animated animate_fadeIn my-0">
 
             <div class="level-left">
               <nuxt-link to="/">
@@ -122,15 +122,15 @@
               </nuxt-link>
             </div>
             <div class="level-right">
-              <nuxt-link to="/about" :class="{ 'main-item-active': route.path == '/about' }"
-                class="level-item main-item has-text-white mr-5 ">About</nuxt-link>
-              <nuxt-link to="/work" :class="{ 'main-item-active': route.path.includes('work') }"
-                class="level-item main-item has-text-white  mr-5">Work</nuxt-link>
+              <nuxt-link to="/about" :class="{'has-text-white': route.path == '/', 'main-item-active': route.path == '/about' }"
+                class="level-item has-hover-main main-item  mr-5 ">About</nuxt-link>
+              <nuxt-link to="/work" :class="{'has-text-white': route.path == '/' , 'main-item-active': route.path.includes('work') }"
+                class="level-item has-hover-main main-item   mr-5">Work</nuxt-link>
               <a href="https://whitegraphite.co.uk" target="blank"
-                :class="{ 'main-item-active': route.path.includes('work') }"
-                class="level-item main-item has-text-white  mr-5">Studio</a>
-              <nuxt-link to="/contact" :class="{ 'main-item-active': route.path == '/contact' }"
-                class="level-item main-item has-text-white">Contact</nuxt-link>
+                :class="{'has-text-white': route.path == '/'}"
+                class="level-item has-hover-main main-item   mr-5">Studio</a>
+              <nuxt-link to="/contact" :class="{'has-text-white': route.path == '/', 'main-item-active': route.path == '/contact' }"
+                class="level-item has-hover-main main-item ">Contact</nuxt-link>
             </div>
           </div>
 
@@ -138,6 +138,7 @@
       </div>
       <div class="">
         <section class=" container ">
+          <div class="is-hidden-touch mt-6 pt-5"></div>
           <NuxtLoadingIndicator color="white" />
           <NuxtPage class="" />
         </section>
@@ -204,9 +205,16 @@
 
           </div>
         </footer>
-        <div @click="scrollToTop" class="scroller is-clickable">
+        <!-- <div @click="scrollToTop" class="scroller is-clickable">
           <button class="scrollToTop">
-            <figure class="image is-24x24 container">
+            <figure class="image is-24x24 scrl-center ">
+              <img src="/assets/icons/arrow-up.svg" alt="">
+            </figure>
+          </button>
+        </div> -->
+        <div @click="scrollToTop" class="scroller is-clickable">
+          <button class="scrollToTop-two">
+            <figure class="image is-24x24  ">
               <img src="/assets/icons/arrow-up.svg" alt="">
             </figure>
           </button>
@@ -344,16 +352,18 @@ html {
 
 
 .main-item {
-  transition: 0.4s all ease-in;
+  transition: 0.2s all ease-in;
+  color:grey;
 }
 
 .main-item:hover {
-  border-bottom: 1px solid #0a0a0a;
-  transition: 0.4s all ease-in;
+  /* border-bottom: 1px solid #0a0a0a; */
+  color:lightgrey;
+  transition: 0.2s all ease-in;
 }
 
 .main-item-active {
-  border-bottom: 1px solid #0a0a0a;
+  color:white;
   transition: 0.4s all ease-in;
 }
 
@@ -631,8 +641,38 @@ a#menu-icon.close .bar:last-child {
   z-index: 5;
   transition: all .5s ease;
 }
+.scrollToTop-two {
+  background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0 0.7em;
+/*   
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px; */
+
+  z-index: 5;
+  transition: all .5s ease;
+}
 
 .scrollToTop:hover {
+  transform: translateY(3px);
+}
+.scrollToTop-two:hover {
   transform: translateY(3px);
 }
 
@@ -642,6 +682,21 @@ a#menu-icon.close .bar:last-child {
 }
 
 
+.sticky-menu-main {
+  position: fixed;
+top:0px;
+width: 100%;
+  z-index: 10;
+  background-image: linear-gradient(rgba(12, 12, 12, 0.8), transparent);
+
+}
+/* .sticky-menu-main-inner {
+  position: sticky;
+top:0;
+  z-index: 100;
+  background-image: linear-gradient(rgba(12, 12, 12, 0.8), transparent);
+
+} */
 .sticky-menu {
   position: sticky;
   top: 0px;
@@ -674,5 +729,18 @@ a#menu-icon.close .bar:last-child {
 .menu-box-open {
   max-height: 100% !important;
   transition: all 0.2s ease-out;
+}
+
+a.has-hover {
+    transition: 0.2s all ease-in;
+    color: #666666!important
+}
+.main-item.has-hover-main:hover {
+    transition: 0.2s all ease-in;
+    color: #666666!important
+}
+
+a.has-hover:hover {
+    color: lightgrey !important
 }
 </style>

@@ -93,7 +93,7 @@
                     <p class="heading">
                         CLIENTS</p>
                     <div class="columns is-mobile is-multiline">
-                        <div class="column  is-4-touch px-3 py-3 " v-for="(row, index) in clients_list" :key="index + '_client'">
+                        <div class="column  is-4-touch px-5 py-0 " v-for="(row, index) in clients_list" :key="index + '_client'">
                             <figure class="image is-1by1  ">
                                 <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
                             </figure>
