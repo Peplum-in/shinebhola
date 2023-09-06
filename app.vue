@@ -655,7 +655,7 @@ a#menu-icon.close .bar:last-child {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  padding: 0 0.7em;
+  padding: 0.7em 0.7em;
 /*   
   font-size: 16px;
   line-height: 48px;
