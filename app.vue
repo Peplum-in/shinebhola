@@ -122,14 +122,16 @@
               </nuxt-link>
             </div>
             <div class="level-right">
-              <nuxt-link to="/about" :class="{'has-text-white': route.path == '/', 'main-item-active': route.path == '/about' }"
+              <nuxt-link to="/about"
+                :class="{ 'has-text-white': route.path == '/', 'main-item-active': route.path == '/about' }"
                 class="level-item has-hover-main main-item  mr-5 ">About</nuxt-link>
-              <nuxt-link to="/work" :class="{'has-text-white': route.path == '/' , 'main-item-active': route.path.includes('work') }"
+              <nuxt-link to="/work"
+                :class="{ 'has-text-white': route.path == '/', 'main-item-active': route.path.includes('work') }"
                 class="level-item has-hover-main main-item   mr-5">Work</nuxt-link>
-              <a href="https://whitegraphite.co.uk" target="blank"
-                :class="{'has-text-white': route.path == '/'}"
+              <a href="https://whitegraphite.co.uk" target="blank" :class="{ 'has-text-white': route.path == '/' }"
                 class="level-item has-hover-main main-item   mr-5">Studio</a>
-              <nuxt-link to="/contact" :class="{'has-text-white': route.path == '/', 'main-item-active': route.path == '/contact' }"
+              <nuxt-link to="/contact"
+                :class="{ 'has-text-white': route.path == '/', 'main-item-active': route.path == '/contact' }"
                 class="level-item has-hover-main main-item ">Contact</nuxt-link>
             </div>
           </div>
@@ -214,7 +216,7 @@
         </div> -->
         <div @click="scrollToTop" class="scroller is-clickable">
           <button class="scrollToTop-two">
-            <figure class="image is-24x24  ">
+            <figure class="image is-24x24 container  ">
               <img src="/assets/icons/arrow-up.svg" alt="">
             </figure>
           </button>
@@ -229,6 +231,16 @@
 
 <script setup>
 
+
+// ngOnInit() {
+//   window.addEventListener('scroll', () => {
+//     this.windowScrolled = window.pageYOffset !== 0;
+//   });
+// }
+
+const showScroller = reactive({
+  show: false
+})
 
 const showMobileNav = reactive({
   isOpen: false
@@ -353,17 +365,17 @@ html {
 
 .main-item {
   transition: 0.2s all ease-in;
-  color:grey;
+  color: grey;
 }
 
 .main-item:hover {
   /* border-bottom: 1px solid #0a0a0a; */
-  color:lightgrey;
+  color: lightgrey;
   transition: 0.2s all ease-in;
 }
 
 .main-item-active {
-  color:white;
+  color: white;
   transition: 0.4s all ease-in;
 }
 
@@ -641,6 +653,7 @@ a#menu-icon.close .bar:last-child {
   z-index: 5;
   transition: all .5s ease;
 }
+
 .scrollToTop-two {
   background-color: #fff;
   color: black;
@@ -656,7 +669,7 @@ a#menu-icon.close .bar:last-child {
   display: grid;
   place-items: center;
   /* padding: 0.7em 0.7em; */
-/*   
+  /*   
   font-size: 16px;
   line-height: 48px;
   width: 48px;
@@ -672,6 +685,7 @@ a#menu-icon.close .bar:last-child {
 .scrollToTop:hover {
   transform: translateY(3px);
 }
+
 .scrollToTop-two:hover {
   transform: translateY(3px);
 }
@@ -684,12 +698,13 @@ a#menu-icon.close .bar:last-child {
 
 .sticky-menu-main {
   position: fixed;
-top:0px;
-width: 100%;
+  top: 0px;
+  width: 100%;
   z-index: 10;
   background-image: linear-gradient(rgba(12, 12, 12, 0.8), transparent);
 
 }
+
 /* .sticky-menu-main-inner {
   position: sticky;
 top:0;
@@ -732,15 +747,15 @@ top:0;
 }
 
 a.has-hover {
-    transition: 0.2s all ease-in;
-    color: #666666!important
+  transition: 0.2s all ease-in;
+  color: #666666 !important
 }
+
 .main-item.has-hover-main:hover {
-    transition: 0.2s all ease-in;
-    color: #666666!important
+  transition: 0.2s all ease-in;
+  color: #666666 !important
 }
 
 a.has-hover:hover {
-    color: lightgrey !important
-}
-</style>
+  color: lightgrey !important
+}</style>
