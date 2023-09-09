@@ -182,22 +182,22 @@
               <div class="level-item">
                 <div class="has-text-grey  ">
                   <div class=" mb-2 ">
-                    <a class="is-inline-block mr-2" href="https://instagram.com/shine_bhola">
-                      <figure class="image is-24x24">
-                        <img src="/assets/icons/instagram.svg" alt="">
-                      </figure>
-                    </a>
-                    <a class="is-inline-block mr-2" href="mailto:info@shinebhola.com">
+                    <a class="is-inline-block pr-1 mr-1 " href="mailto:info@shinebhola.com">
                       <figure class="image is-24x24">
                         <img src="/assets/icons/email.svg" alt="">
                       </figure>
                     </a>
-                    <a class="is-inline-block" href="tel:919414227723">
+                    <a class="is-inline-block px-1 mr-1 "  href="tel:919414227723">
                       <figure class="image is-24x24">
                         <img src="/assets/icons/call.svg" alt="">
                       </figure>
                     </a>
-
+                    
+                    <a class="is-inline-block px-1" href="https://instagram.com/shine_bhola">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/instagram.svg" alt="">
+                      </figure>
+                    </a>
                   </div>
                   ©️2023 Shine Bhola. All Rights Reserved.
                 </div>
@@ -214,12 +214,12 @@
             </figure>
           </button>
         </div> -->
-        <div @click="scrollToTop" class="scroller is-clickable">
-          <button class="scrollToTop-two">
-            <figure class="image is-24x24 container  ">
-              <img src="/assets/icons/arrow-up.svg" alt="">
+        <div @click="scrollToTop" class=" is-clickable">
+          <div class="scrollToTop-two">
+            <figure class="image is-48x48 -desktop is-36x36-touch ">
+              <img src="/assets/icons/arrow-circle.svg" alt="">
             </figure>
-          </button>
+          </div>
         </div>
       </div>
 
@@ -321,10 +321,29 @@ html {
   font-weight: 900;
 }
 
+.textarea {
+  border-radius: 0px !important;
+  background: transparent;
+  color:white !important;
+  
+}
+.textarea:focus {
+  border-color:white;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fefefe !important;
+  opacity: 0.4;
+}
 .input {
   border-radius: 0px !important;
   background: transparent;
-
+  color:white !important;
+  
+}
+.input:focus {
+  border-color:white;
 }
 
 ::placeholder {
@@ -655,19 +674,19 @@ a#menu-icon.close .bar:last-child {
 }
 
 .scrollToTop-two {
-  background-color: #fff;
-  color: black;
-  border: none;
-  border-radius: 50%;
   cursor: pointer;
   position: fixed;
   bottom: 30px;
   right: 30px;
+  /* background-color: #fff;
+  color: black;
+  border: none;
+  border-radius: 50%;
 
   aspect-ratio: 1;
   border-radius: 50%;
   display: grid;
-  place-items: center;
+  place-items: center; */
   /* padding: 0.7em 0.7em; */
   /*   
   font-size: 16px;

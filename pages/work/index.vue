@@ -4,7 +4,7 @@
       <div class="mobile-filter ">
 
 
-        <p @click="showFilterMobileNav.isOpen = !showFilterMobileNav.isOpen"
+        <!-- <p @click="showFilterMobileNav.isOpen = !showFilterMobileNav.isOpen"
           class="pb-3 is-clickable has-text-white is-size-6">
 
           Filter by category
@@ -21,10 +21,10 @@
             </nuxt-link>
           </p>
           <br>
-        </div>
+        </div> -->
       </div>
     </div>
-    <div class="level px-0 is-mobile is-hidden-touch">
+    <div class="level animate__animated animate__fadeIn px-0 is-mobile is-hidden-touch">
       <div class="level-left">
         <div class="level-item" v-for="(nav, index) in navigation" :key="index">
           <nuxt-link :to="'/work/' + nav.link_text" class=" has-hover has-text-white is-capitalized "

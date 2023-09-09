@@ -17,13 +17,13 @@
                 <div class="level is-mobile ">
                     <div class="level-left ">
 
-                        <div class="level-item  ">
+                        <!-- <div class="level-item  ">
 
                             {{ text_string }}
-                        </div>
+                        </div> -->
                         <nuxt-link v-for="(nav, index) in navigation" :key="index" :to="'/work/' + nav.link_text"
-                            class="level-item has-hover is-capitalized "
-                            :class="{ 'is-hidden': route.params.work == nav.link_text }">
+                            class="level-item has-text-white is-capitalized "
+                            :class="{ 'has-hover has-text-grey': route.params.work != nav.link_text }">
 
                             {{ nav.link_text }}
                         </nuxt-link>

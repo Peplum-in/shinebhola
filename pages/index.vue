@@ -60,9 +60,9 @@
 
 
                 <div class="columns is-variable is-8 is-multiline">
-                    <div class="column is-2 " v-for="(row, index) in clients_list" :key="index + '_client'">
-                        <figure class="image is-1by1  ">
-                            <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
+                    <div class="column is-2-desktop py-4" v-for="(row, index) in clients" :key="index + '_client'">
+                        <figure class="image is-5by3 ">
+                            <img :alt="'Photography for ' + row.client + ' by Shine Bhola'" :src="cldImage(row.image)" />
                         </figure>
                     </div>
                 </div>
@@ -92,10 +92,10 @@
                     <p class="heading">
                         CLIENTS</p>
                     <div class="columns is-mobile is-multiline">
-                        <div class="column is-4-touch px-4 py-0" v-for="(row, index) in clients_list"
-                            :key="index + '_client'">
-                            <figure class="image is-1by1">
-                                <img :alt="'Photography for ' + row.name + ' by Shine Bhola'" :src="row.image" />
+                        <div class="column is-4-touch px-4 py-1" v-for="(row, index) in clients" :key="index + '_client'">
+                            <figure class="image is-5by3">
+                                <img :alt="'Photography for ' + row.client + ' by Shine Bhola'"
+                                    :src="cldImage(row.image)" />
                             </figure>
                         </div>
                     </div>
@@ -135,6 +135,7 @@ function cldVideoBase(link) {
 }
 
 const { data: work } = await useAsyncData('work', () => queryContent('/work').find())
+const { data: clients } = await useAsyncData('clients', () => queryContent('/clients').find())
 
 const clients_list = [
     {
@@ -178,4 +179,5 @@ const clients_list = [
     border-top: 0.5px solid #fefefe70;
     margin-top: 1.5rem;
     padding-top: 0.8rem;
-}</style>
+}
+</style>
