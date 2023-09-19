@@ -10,7 +10,7 @@
                     <div class="animate__animated animate__fadeIn">
 
                         <p class="heading mt-4">
-                            ABOUT US</p>
+                            ABOUT</p>
                         <p class=" has-text-white is-size-5-desktop is-size-6-touch">
                             Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect
                             from
@@ -64,14 +64,14 @@
 
 
         </section>
-        <figure class="animate__animated animate__fadeIn is-hidden-desktop image is-4by5 mb-6">
+        <figure class="animate__animated animate__fadeIn is-hidden-desktop image is-4by5 ">
             <img src="/img/shineshine.jpg" class="has-background-dark" alt="" />
         </figure>
         <section class="is-hidden-desktop section ">
             <div class="columns">
                 <div class="animate__animated animate__fadeIn column has-text-white is-5-desktop ">
                     <p class="heading">
-                        ABOUT US</p>
+                        ABOUT</p>
                     <p class="has-text-white is-size-5-desktop is-size-6-touch">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.

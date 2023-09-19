@@ -34,10 +34,10 @@
         <div class="is-hidden-touch pt-6 has-text-white">
 
 
-            <div class="columns has-text-white  mb-6 is-variable is-8 is-multiline">
+            <div class="columns has-text-white  mb-5 is-variable is-8 is-multiline">
                 <div class="column is-12">
                     <p class="heading">
-                        ABOUT US</p>
+                        ABOUT</p>
                     <p class="is-size-5-desktop">
                         Meet Shine Bhola, an architect, an academician and a photographer. <br> Graduated as an architect
                         from
@@ -76,7 +76,7 @@
             <div class=" has-text-white  mb-6 ">
                 <div class="mt-6">
                     <p class="heading">
-                        ABOUT US</p>
+                        ABOUT</p>
                     <p class="is-size-6">
                         Meet Shine Bhola, an architect, an academician and a photographer. Graduated as an architect from
                         MNIT Jaipur and MFA in Photography from NID Ahmedabad and UCA Farnham, United Kingdom in 2010.
@@ -87,7 +87,7 @@
 
                 </div>
 
-                <div class="section px-1 mt-6">
+                <div class="section px-1 mt-3">
 
                     <p class="heading">
                         CLIENTS</p>

@@ -151,9 +151,9 @@
               <div class="level-item">
                 <div class="has-text-grey ">
                   <div class=" mb-2 ">
-                    <a class="is-inline-block mr-4" href="https://instagram.com/shine_bhola">
+                    <a class="is-inline-block mr-4" href="tel:919414227723">
                       <figure class="image is-24x24">
-                        <img src="/assets/icons/instagram.svg" alt="">
+                        <img src="/assets/icons/call.svg" alt="">
                       </figure>
                     </a>
                     <a class="is-inline-block mr-4" href="mailto:info@shinebhola.com">
@@ -161,9 +161,9 @@
                         <img src="/assets/icons/email.svg" alt="">
                       </figure>
                     </a>
-                    <a class="is-inline-block" href="tel:919414227723">
+                    <a class="is-inline-block mr-4" href="https://instagram.com/shine_bhola">
                       <figure class="image is-24x24">
-                        <img src="/assets/icons/call.svg" alt="">
+                        <img src="/assets/icons/instagram.svg" alt="">
                       </figure>
                     </a>
 
@@ -182,14 +182,14 @@
               <div class="level-item">
                 <div class="has-text-grey  ">
                   <div class=" mb-2 ">
-                    <a class="is-inline-block pr-1 mr-1 " href="mailto:info@shinebhola.com">
-                      <figure class="image is-24x24">
-                        <img src="/assets/icons/email.svg" alt="">
-                      </figure>
-                    </a>
-                    <a class="is-inline-block px-1 mr-1 "  href="tel:919414227723">
+                    <a class="is-inline-block pr-1 mr-1 "  href="tel:919414227723">
                       <figure class="image is-24x24">
                         <img src="/assets/icons/call.svg" alt="">
+                      </figure>
+                    </a>
+                    <a class="is-inline-block px-1 mr-1 " href="mailto:info@shinebhola.com">
+                      <figure class="image is-24x24">
+                        <img src="/assets/icons/email.svg" alt="">
                       </figure>
                     </a>
                     
@@ -307,10 +307,7 @@ html {
 
 .button-shine:hover {
   transition: 0.2s all ease-in;
-  /* border:none; */
-  /* border-radius:0;
-  padding-bottom:3px; */
-  /* border-width:2px ; */
+
 }
 
 .brandtype {

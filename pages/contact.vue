@@ -14,7 +14,7 @@
 
 
                 <form class="" @submit="sendMessage()">
-                    <div class="columns mt-6">
+                    <div class="columns mt-2">
                         <div class="column is-5-desktop">
 
                             <p class="is-size-5-desktop is-is-size-6-touch">
@@ -63,10 +63,10 @@
 
 
                 <form class="" @submit="sendMessage()">
-                    <div class="columns mt-6">
+                    <div class="columns mt-2">
                         <div class="column is-5-desktop">
 
-                            <p class="is-size-5-desktop is-is-size-6-touch mb-2">
+                            <p class="is-size-5-desktop is-is-size-6-touch">
                                 Tell us about your project or just say hello!
                                 Drop us a line.</p>
                             <br>
