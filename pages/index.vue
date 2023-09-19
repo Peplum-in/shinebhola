@@ -74,7 +74,7 @@
         <div class="is-hidden-desktop section py-0">
 
             <div class=" has-text-white  mb-6 ">
-                <div class="mt-6">
+                <div class="mt-4">
                     <p class="heading">
                         ABOUT</p>
                     <p class="is-size-6">
@@ -87,7 +87,7 @@
 
                 </div>
 
-                <div class="section px-1 mt-3">
+                <div class="section px-1 pt-0 mt-6">
 
                     <p class="heading">
                         CLIENTS</p>
