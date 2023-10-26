@@ -112,6 +112,8 @@
 </template>
 <script setup>
 
+
+
 function cldImage(link) {
 
     const x = link.split('/upload')
@@ -134,7 +136,7 @@ function cldVideoBase(link) {
     return final
 }
 
-const { data: work } = await useAsyncData('work', () => queryContent('/work').find())
+const { data: work } = await useAsyncData('homepage', () => queryContent('/homepage').find())
 const { data: clients } = await useAsyncData('clients', () => queryContent('/clients').find())
 
 const clients_list = [
