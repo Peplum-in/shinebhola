@@ -77,7 +77,7 @@ const { data: work } = await useAsyncData('work', () => queryContent('/work').wh
 function cldImage(link) {
 
     const x = link.split('/upload')
-    const z = x[0] + '/upload/f_webp,q_80,w_900,dpr_auto/'
+    const z = x[0] + '/upload/f_webp,q_80,w_1100/'
     const final = z + x[1]
     return final
 }
