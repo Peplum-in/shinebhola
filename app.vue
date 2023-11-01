@@ -182,7 +182,7 @@
               <div class="level-item">
                 <div class="has-text-grey  ">
                   <div class=" mb-2 ">
-                    <a class="is-inline-block pr-1 mr-1 "  href="tel:919414227723">
+                    <a class="is-inline-block pr-1 mr-1 " href="tel:919414227723">
                       <figure class="image is-24x24">
                         <img src="/assets/icons/call.svg" alt="">
                       </figure>
@@ -192,7 +192,7 @@
                         <img src="/assets/icons/email.svg" alt="">
                       </figure>
                     </a>
-                    
+
                     <a class="is-inline-block px-1" href="https://instagram.com/shine_bhola">
                       <figure class="image is-24x24">
                         <img src="/assets/icons/instagram.svg" alt="">
@@ -297,6 +297,13 @@ html {
   border-bottom: 0.5px solid #ffffff7a;
 }
 
+.shine-hr {
+  transition: 0.2s all ease-in;
+  height: 1px !important;
+  background-color: #ffffff7a !important;
+  /* border-bottom: 0.5px solid #ffffff7a; */
+}
+
 .button-shine-two {
   border: none;
   border-radius: 0;
@@ -321,11 +328,12 @@ html {
 .textarea {
   border-radius: 0px !important;
   background: transparent;
-  color:white !important;
-  
+  color: white !important;
+
 }
+
 .textarea:focus {
-  border-color:white;
+  border-color: white;
 }
 
 ::placeholder {
@@ -333,14 +341,16 @@ html {
   color: #fefefe !important;
   opacity: 0.4;
 }
+
 .input {
   border-radius: 0px !important;
   background: transparent;
-  color:white !important;
-  
+  color: white !important;
+
 }
+
 .input:focus {
-  border-color:white;
+  border-color: white;
 }
 
 ::placeholder {
